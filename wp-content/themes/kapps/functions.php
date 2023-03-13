@@ -6,16 +6,21 @@ add_action('wp_enqueue_scripts','style_theme');
 function style_theme(){
     wp_enqueue_style('style', get_stylesheet_uri());
     wp_enqueue_style('main', get_template_directory_uri() . '/assets/css/main.css');
-    wp_enqueue_style('custom-google-fonts-Montserrat:wght@400;600;700', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+    wp_enqueue_style('custom-google-fonts-Montserrat:wght@300;400;600;700', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
     wp_enqueue_style('custom-google-fonts-Libre+Franklin:wght@700', 'https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap');
+    wp_enqueue_style('custom-google-fonts-Noto+Sans:wght@800', 'https://fonts.googleapis.com/css2?family=Noto+Sans:wght@800&display=swap');
+    wp_enqueue_style('custom-google-fonts-Open+Sans&display', 'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 }
 
 
 add_action('wp_footer', 'scripts_theme');
 function scripts_theme() {
     wp_enqueue_script('slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js');
-    wp_enqueue_script('slick_js', get_template_directory_uri() . '/assets/js/main.js');
+    wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/4a11c97cb2.js');
+    wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/jquery.js');
+    wp_enqueue_script('slick_js', get_template_directory_uri() . '/assets/js/slick_js.js');
     wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/main.js');
+
 }
 
 add_action('init', 'true_jquery_register' );
@@ -26,6 +31,29 @@ function true_jquery_register() {
         wp_enqueue_script( 'jquery' );
     }
 }
+// ACF Register options page
+// =============================
+add_action('acf/init', 'my_acf_op_init');
+function my_acf_op_init() {
+
+    // Check function exists.
+    if( function_exists('acf_add_options_page') ) {
+
+        // Register options page.
+        $option_page = acf_add_options_page(array(
+            'page_title'    => __('Theme General Settings'),
+            'menu_title'    => __('Theme Settings'),
+            'menu_slug'     => 'theme-general-settings',
+            'capability'    => 'edit_posts',
+            'redirect'      => false
+        ));
+    }
+}
+
+// ================================
+
+
+
 
 
 // Allow SVG admin upload
