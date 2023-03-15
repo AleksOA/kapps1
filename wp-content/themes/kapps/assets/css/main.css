@@ -89,9 +89,9 @@ h3 {
 
 .btn-primary-link{
     box-sizing: border-box;
+    text-decoration: none;
     color: #FFFFFF;
     background-color: #06B25F;
-    text-decoration: none;
     padding: 3px 24px;
     display: inline-flex;
     justify-content: center;
@@ -100,6 +100,10 @@ h3 {
     border: 2px solid #06B25F;
     cursor: pointer;
     transition: all 0.2s;
+    font-size: 16px;
+    line-height: 36px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 .btn-primary-link:hover{
     background-color: #0b9854;
@@ -128,6 +132,10 @@ h3 {
     border: 2px solid #06B25F;
     cursor: pointer;
     transition: all 0.2s;
+    font-size: 16px;
+    line-height: 36px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .btn-secondary-link:hover{
@@ -697,10 +705,73 @@ Header finish*/
 .footer__end-content p:nth-child(1){
     width: 64%;
 }
+/*============================================
+Footer finish*/
+
+/*Let's talk start
+============================================*/
+.let-is-talk{}
+.let-is-talk__wrapper {
+    position: relative;
+
+}
+.let-is-talk__background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+.let-is-talk__background {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.let-is-talk__background-wrapper-mobile{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+.let-is-talk__background-mobile {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.let-is-talk__content {
+    padding: 14vw 0 20vw 0;
+}
+.let-is-talk__text-one {
+    text-align: center;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+}
+.let-is-talk__text-two {
+    text-align: center;
+    margin-bottom: 36px;
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 29px;
+}
+.let-is-talk__button {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
 
 
 /*============================================
-Footer finish*/
+Let's talk finish*/
 
 /*==============================================================================================
 Global sections finish*/
@@ -868,6 +939,151 @@ Global sections finish*/
     font-size: 24px;
     line-height: 38px;
 }
+
+
+/*Services
+============================================*/
+.services {
+
+}
+.services__wrapper {
+    max-width: 1130px;
+    margin: 0 auto 120px auto;
+
+}
+.services__section-title {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.services__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.services__section-text{
+    order: 2;
+    width: 48.94%;
+}
+.services__section-text.right{
+    order: 1;
+}
+.services__title-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+.services__title {
+    margin-bottom: 4px;
+}
+.services__text {}
+.services__text-mobile {
+    display: none;
+}
+.services__section-image {
+    width: 48.67%;
+    order: 1;
+}
+.services__section-image.right {
+    order: 2;
+}
+.services__image-wrapper {
+    width: 100%;
+    height: auto;
+}
+.svgGlasses {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+/*.svg__wrapper{*/
+/*    height: 0;*/
+/*    padding-top: 100%;*/
+/*    position: relative;*/
+/*}*/
+/*.svg__item {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
+
+
+/*.test2:hover {*/
+/*    animation: spin 20s ease infinite;*/
+/*    z-index: 1000;*/
+/*    position: relative;*/
+/*}*/
+
+/*.test1:hover {*/
+/*    animation: spin 100s ease infinite;*/
+/*}*/
+
+/*@keyframes spin {*/
+/*    100% {*/
+/*        transform: rotate(360deg);*/
+/*        transform-origin: 50% 50%;*/
+/*        position: relative;*/
+/*        z-index: 1000;*/
+/*    }*/
+
+
+
+/* Achievement
+===============================*/
+.achievement__wrapper {
+    margin-bottom: 120px;
+}
+.achievement__title {
+    text-align: center;
+    margin-bottom: 100px;
+}
+.achievement__items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.achievement__item {
+    width: 322px;
+    height: 400px;
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0 3px 16px 2px rgba(29, 51, 107, 0.15);
+    border-radius: 16px;
+
+}
+.achievement__image {
+    width: 100%;
+    height: auto;
+}
+.achievement__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.achievement__text {
+    position: absolute;
+    top: 282px;
+    padding: 0 22px;
+    text-align: center;
+}
+.achievement__text strong{
+    color: #276ED8;
+}
+.achievement__item:first-child .achievement__text strong{
+    color: #242424;
+}
+
+
+
+
+
 
 /*============================================
 Home finish*/
@@ -1286,6 +1502,136 @@ Home finish*/
 /*===========================================
 Footer finish*/
 
+
+/*Let's talk start
+============================================*/
+@media(max-width: 1470px){
+    .let-is-talk__content {
+        padding: 11vw 0 23vw 0;
+    }
+    .let-is-talk__text-one {
+        font-size: 38px;
+    }
+}
+
+@media(max-width: 1220px){
+    .let-is-talk__text-one {
+        margin-bottom: 5px;
+        font-size: 30px;
+    }
+    .let-is-talk__content {
+        padding: 10vw 0 22vw 0;
+    }
+}
+@media(max-width: 1030px){
+    .let-is-talk__text-two {
+        margin-bottom: 20px;
+    }
+    .let-is-talk__text-one {
+        margin-bottom: 0;
+        font-size: 24px;
+    }
+    .let-is-talk__text-two {
+        margin-bottom: 18px;
+        font-size: 20px;
+    }
+
+}
+
+@media(max-width: 900px){
+    .let-is-talk__content {
+        padding: 8vw 0 17vw 0;
+    }
+}
+@media(max-width: 808px){
+    .let-is-talk__text-one {
+        font-size: 20px;
+        line-height: 40px;
+    }
+    .let-is-talk__content {
+        padding: 9vw 0 17vw 0;
+    }
+    .let-is-talk__text-two {
+        margin-bottom: 7px;
+    }
+    .let-is-talk__text-two {
+        font-size: 18px;
+    }
+}
+@media(max-width: 700px){
+    .let-is-talk__background-wrapper{
+        display: none;
+    }
+    .let-is-talk__background-wrapper-mobile {
+        display: block;
+    }
+    .let-is-talk__text-one {
+        font-size: 24px;
+        line-height: 38px;
+    }
+    .let-is-talk__text-one {
+        font-size: 24px;
+        line-height: 38px;
+        margin-bottom: 12px;
+    }
+    .let-is-talk__text-two {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 24px;
+    }
+    .let-is-talk__content {
+        padding: 43vw 0 59vw 0;
+    }
+
+    @media(max-width: 578px){
+        .let-is-talk__content {
+            padding: 42vw 0 50vw 0;
+        }
+    }
+
+    @media(max-width: 506px){
+        .let-is-talk__content {
+            padding: 37vw 0 50vw 0;
+        }
+    }
+
+    @media(max-width: 460px){
+        .let-is-talk__content {
+            padding: 31vw 0 50vw 0;
+        }
+        .let-is-talk__text-one {
+            font-size: 20px;
+            line-height: 36px;
+        }
+    }
+
+    @media(max-width: 395px){
+        .let-is-talk__text-two {
+            margin-bottom: 10px;
+        }
+        .let-is-talk__text-one {
+            font-size: 18px;
+        }
+    }
+
+    @media(max-width: 360px){
+        .let-is-talk__wrapper .container {
+            padding: 0 10px;
+        }
+        .let-is-talk__text-one {
+            margin-bottom: 0;
+        }
+        .let-is-talk__content {
+            padding: 28vw 0 50vw 0;
+        }
+    }
+
+}
+
+
+/*============================================
+Let's talk finish*/
+
 /* ==============================================================================================
 Global sections finish*/
 
@@ -1549,6 +1895,146 @@ Global sections finish*/
         font-weight: 300;
     }
 }
+
+/*Services
+============================================*/
+@media(max-width: 1200px){
+    .services__item {
+        margin-bottom: 60px;
+    }
+    .services__item:last-child{
+        margin-bottom: 0;
+    }
+}
+
+@media(max-width: 870px){
+    .services__section-text {
+        width: 58.94%;
+    }
+    .services__section-image {
+        width: 38.67%;
+    }
+}
+
+@media(max-width: 700px){
+    .services__section-text {
+        width: 100%;
+    }
+    .services__section-image {
+        width: 100%;
+    }
+    .services__section-text{
+        order: 1;
+    }
+    .services__section-image {
+        order: 2;
+    }
+    .services__title {
+        text-align: center;
+    }
+
+}
+
+@media(max-width: 600px){
+    .services__section-title {
+        margin-bottom: 41px;
+        font-size: 22px;
+        line-height: 24px;
+    }
+    .services__title {
+        font-size: 18px;
+    }
+
+    .services__text {
+        display: none;
+    }
+    .services__text-mobile {
+        display: block;
+    }
+    .services__item {
+        margin-bottom: 54px;
+    }
+    .services__item:last-child .services__image-wrapper {
+        display: none;
+    }
+    .services__wrapper {
+        max-width: 1130px;
+        margin: 0 auto 30px auto;
+    }
+}
+
+
+/* Achievement
+===============================*/
+
+@media(max-width: 1365px){
+    .achievement__item {
+        width: 230px;
+        height: 285px;
+    }
+    .achievement__text {
+        top: 153px;
+    }
+}
+
+@media(max-width: 1050px){
+    .achievement__item {
+        width: 322px;
+        height: 400px;
+    }
+    .achievement__text {
+        top: 282px;
+    }
+    .achievement__items {
+        justify-content: space-around;
+    }
+    .achievement__item {
+        margin-bottom: 43px;
+    }
+}
+
+@media(max-width: 768px){
+    .achievement__item {
+        margin-bottom: 21px;
+    }
+}
+
+@media(max-width: 724px){
+    .achievement__item {
+        margin-bottom: 21px;
+    }
+    .achievement__title {
+        margin-bottom: 50px;
+        font-size: 22px;
+        line-height: 24px;
+    }
+    .achievement__item {
+        margin-bottom: 42px;
+    }
+    .achievement__wrapper {
+        margin-bottom: 30px;
+    }
+    achievement
+
+}
+
+@media(max-width: 420px){
+    .achievement .container {
+        padding: 0 10px;
+    }
+}
+
+@media(max-width: 370px){
+    .achievement__item {
+        width: 270px;
+        height: 335px;
+    }
+    .achievement__text {
+        top: 221px;
+    }
+}
+
+
 
 
 /*===========================================
