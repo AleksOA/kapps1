@@ -7,10 +7,6 @@
 <?php get_header(); ?>
 <main>
     <section>
-<!--        <div class="banner__wrapper">-->
-<!---->
-<!--        </div>-->
-
         <div class="banner">
             <?php $slide_home_banner=get_field('slide_home_banner'); ?>
             <div class="banner__slick">
@@ -99,6 +95,97 @@
                 <p class="technologies__text-two"><?php if( $text_two_home_technologies ) { echo $text_two_home_technologies ;} ?></p>
             </div>
         </div>
+    </section>
+
+    <section>
+
+        <div class="services">
+            <div class="container">
+                <div class="services__wrapper">
+                    <?php $title_section_home_services = get_field('title_section_home_services');?>
+                    <h2 class="services__section-title">
+                        <?php if($title_section_home_services) {echo $title_section_home_services;} ?>
+                    </h2>
+                    <?php $service_home_services = get_field('service_home_services');
+                    if($service_home_services) :foreach ($service_home_services as $key => $item) : ?>
+                        <?php
+                        $class = '';
+                        if($key % 2 == 0) {
+                            $class = 'right';
+                        }
+                        $image_home_services = $item["imade_home_services"]["url"];
+                        $title_home_services = $item["title_home_services"];
+                        $description_home_services = $item["description_home_services"];
+                        $id_post_home_services = $item["id_post_home_services"];
+                        $description_mobile_home_services = $item["description_mobile_home_services"];
+                        ?>
+                        <div class="services__item">
+                            <div class="services__section-text <?php echo $class ?>">
+                                <a class="services__title-link" href="<?php echo get_permalink($id_post_home_services); ?>">
+                                    <h3 class="services__title">
+                                       <?php if($title_home_services) {echo $title_home_services ;} ?>
+                                    </h3>
+                                </a>
+                                <p class="services__text">
+                                    <?php if($description_home_services) {echo $description_home_services ;} ?>
+                                </p>
+                                <p class="services__text-mobile">
+                                    <?php if($description_mobile_home_services) {echo $description_mobile_home_services ;} ?>
+                                </p>
+                            </div>
+                            <div class="services__section-image <?php echo $class ?>">
+                                <div class="services__image-wrapper">
+                                   <?php if($image_home_services) : ?>
+                                        <object class="svgGlasses" type="image/svg+xml" data="<?php echo $image_home_services ?>"></object>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <?php  get_template_part( 'let_is_talk_part' );  ?>
+    </section>
+    <section>
+        <div class="achievement">
+            <div class="container">
+                <?php
+                $section_title_home_achievement = get_field('section_title_home_achievement');
+
+                ?>
+
+                <div class="achievement__wrapper">
+                    <h2 class="achievement__title">
+
+                        <?php if( $section_title_home_achievement ) { echo $section_title_home_achievement ;} ?>
+                    </h2>
+                    <div class="achievement__items">
+                        <?php
+                        $achievement_home_achievement = get_field('achievement_home_achievement');
+                        if($achievement_home_achievement) : foreach ($achievement_home_achievement as $item) :
+                            $image_home_achievement = $item["image_home_achievement"]["url"];
+                            $text_home_achievement = $item["text_home_achievement"];
+                            ?>
+                            <div class="achievement__item">
+                                <div class="achievement__image">
+                                    <object class="achievement__img" type="image/svg+xml" data="<?php echo $image_home_achievement ?>"></object>
+                                </div>
+                                <div class="achievement__text">
+                                    <?php if( $text_home_achievement ) { echo $text_home_achievement ;} ?>
+                                </div>
+                            </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </section>
 
 </main>
