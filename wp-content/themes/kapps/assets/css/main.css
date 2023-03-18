@@ -1105,12 +1105,95 @@ Contacts finish*/
 .social__item:last-child:before {
     display: none;
 }
-
-
-
-
 /*============================================
 Social widget finish*/
+
+
+/* Services menu start
+============================================*/
+.services-menu__wrapper {
+    margin-bottom: 120px;
+}
+
+.services-menu__title {
+    text-align: center;
+    margin-bottom: 70px;
+}
+.services-menu__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.services-menu__item {
+    margin: 0 9px 60px 9px;
+}
+.services-menu__item-body {
+    position: relative;
+    width: 322px;
+    height: 320px;
+    background: #FFFFFF;
+    box-shadow: 0 3px 20px 6px rgba(29, 51, 107, 0.15);
+    border-radius: 16px;
+}
+.services-menu__item-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 16px;
+    z-index: 2;
+}
+.services-menu__item-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(29, 51, 107, 0.1);
+    box-shadow: 0 3px 16px 4px rgba(29, 51, 107, 0.1);
+    border-radius: 16px;
+    font-size: 0;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s;
+}
+.services-menu__item-link:hover .services-menu__item-cover {
+    visibility: hidden;
+    opacity: 0
+}
+
+.services-menu__item-image {
+    max-width: 120px;
+    max-height: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -90%, 0);
+    z-index: 0;
+}
+.services-menu__item-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.services-menu__item-title {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #0D6EB7;
+    position: absolute;
+    width: 100%;
+    top: 70%;
+    text-align: center;
+}
+/*============================================
+Services menu finish*/
 
 /*==============================================================================================
 Global sections finish*/
@@ -1571,10 +1654,45 @@ Global sections finish*/
     transform: rotate(-45deg);
 }
 
-
-
 /*============================================
 Home finish*/
+
+
+/*Services start
+============================================*/
+/*Services text
+===============================*/
+.services-text {
+
+}
+.services-text__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin: 50px 0 180px 0;
+}
+.services-text__item-one {
+    width: 40.66%;
+    padding-right: 8%;
+}
+.services-text__item-one h3,
+.services-text__item-two h3{
+    margin-bottom: 16px;
+}
+
+.services-text__item-one p,
+.services-text__item-two p{
+    margin-bottom: 30px;
+}
+.services-text__item-one p:last-child,
+.services-text__item-two p:last-child{
+    margin-bottom: 0;
+}
+.services-text__item-two {
+    width: 40.66%;
+}
+
+/*============================================
+Services finish*/
 
 
 /*Adaptation start
@@ -2217,10 +2335,93 @@ Social widget finish*/
 
 /*===================================
 BTN UP finish*/
+/*============================================
+Contacts finish*/
+
+/* Services menu start
+============================================*/
+@media(max-width: 780px){
+    .services-menu__item-title {
+        width: 90%;
+        padding: 0 10px;
+    }
+    .services-menu__item-body {
+        width: 282px;
+        height: 280px;
+    }
+}
+
+@media(max-width: 700px){
+    .services-menu__item-body {
+        width: 230px;
+        height: 228px;
+    }
+    .services-menu__item-title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+@media(max-width: 600px){
+    .services-menu__title {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 22px;
+        line-height: 24px;
+    }
+    .services-menu__item-title {
+        font-size: 14px;
+    }
+    .services-menu__item-body {
+        width: 200px;
+        height: 198px;
+    }
+    .services-menu__item {
+        margin: 0 9px 40px 9px;
+    }
+    .services-menu__wrapper {
+        margin-bottom: 0;
+    }
+}
+
+@media(max-width: 540px){
+    .services-menu__item-body {
+        width: 145px;
+        height: 162px;
+    }
+    .services-menu__item-title {
+        font-size: 12px;
+        line-height: 22px;
+        width: 100%;
+        padding: 0;
+        letter-spacing: 0.01em;
+    }
+    .services-menu .container {
+        padding: 0 10px;
+    }
+}
+
+@media(max-width: 385px){
+    .services-menu__item {
+        margin: 0 0 40px 0;
+    }
+    .services-menu__items {
+        justify-content: space-around;
+    }
+}
+@media(max-width: 360px){
+    .services-menu__item-title {
+        font-size: 14px;
+    }
+    .services-menu__item-body {
+        width: 200px;
+        height: 198px;
+    }
+}
 
 
 /*============================================
-Contacts finish*/
+Services menu finish*/
 
 /* ==============================================================================================
 Global sections finish*/
