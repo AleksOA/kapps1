@@ -12,6 +12,8 @@ function menuHeader(){
     let btnClose = document.querySelector('.close');
     let btnHeader = document.querySelector('.btn-header');
     let headerMenu = document.querySelector('.header-menu');
+    let btnUp = document.querySelector('.btn-up');
+    console.log(btnUp)
 
 
 
@@ -40,9 +42,11 @@ function menuHeader(){
         let scroll = window.pageYOffset;
         if(scroll > 20){
             header.classList.add('scroll');
+            btnUp.classList.add('visible');
         }
         if(scroll < 20){
             header.classList.remove('scroll');
+            btnUp.classList.remove('visible');
         }
     });
 
@@ -68,3 +72,263 @@ function closeSubMenu(){
 
 
 //===============================
+
+
+// Partners
+// ==========================================
+const partnersItem = document.querySelectorAll('.partner__item');
+let qw =true;
+const screenWidth = document.documentElement.clientWidth;
+const btnMore = document.querySelector('.partner__btn-more');
+
+
+const title = document.querySelector('.partners__title');
+
+
+function removeHidden(min, point){
+    partnersItem.forEach((item, index) => {
+        if(index>min && index < 8 && point == 705)  {
+            item.classList.remove('hidden');
+        }
+        if(index>min && index < 10 && point == 1025)  {
+            item.classList.remove('hidden');
+        }
+        if( min == undefined )  {
+            item.classList.remove('hidden');
+        }
+    });
+}
+
+function  hideItem(data){
+ let length = partnersItem.length;
+ if(length > data) {
+     partnersItem.forEach((item, index) => {
+         if(index>data) {
+                item.classList.add('hidden');
+         }
+     });
+ }
+
+}
+
+
+firstRendering(screenWidth);
+function firstRendering(screenWidth1){
+    if ( screenWidth1 < 346  ) {
+        removeHidden();
+        hideItem(3);
+        qw = 0;
+
+        btnMore.setAttribute('data-index', '4');
+        btnMore.setAttribute('data-add-item', '1');
+    }else if (346 < screenWidth1 && screenWidth1 < 1025 && qw != 0 ) {
+        removeHidden();
+        hideItem(7);
+        qw = 1;
+
+        btnMore.setAttribute('data-index', '8');
+        btnMore.setAttribute('data-add-item', '2');
+    }else if (1025 < screenWidth1 && screenWidth1 < 1316) {
+        removeHidden();
+        hideItem(8);
+        qw = 2;
+
+        btnMore.setAttribute('data-index', '9');
+        btnMore.setAttribute('data-add-item', '3');
+    } else if (1317 < screenWidth1) {
+        removeHidden();
+    }
+}
+
+
+
+
+window.addEventListener("resize", toggleItem);
+
+function toggleItem() {
+    let screenWidth = document.documentElement.clientWidth;
+
+    if ( screenWidth < 346  ) {
+        hideItem(3);
+        qw = 0;
+        let index = '4';
+        let indexItemClick = btnMore.getAttribute('data-index-click');
+        if(indexItemClick != null) {
+            index = indexItemClick
+        }
+
+        // let indexRemoveHidden = Number(index) -1;
+        // hideItem(indexRemoveHidden);
+
+        btnMore.setAttribute('data-index', index);
+        // btnMore.setAttribute('data-index', '4');
+        btnMore.setAttribute('data-add-item', '1');
+
+    }else if (346 < screenWidth && screenWidth < 1024 && qw != 0 ) {
+        hideItem(7);
+        qw = 1;
+
+        let index = '8';
+        let indexItemClick = btnMore.getAttribute('data-index-click');
+        if(indexItemClick != null) {
+            index = indexItemClick
+        }
+
+        // let indexRemoveHidden = Number(index) -1;
+        // hideItem(indexRemoveHidden);
+        btnMore.setAttribute('data-index', index);
+
+        // btnMore.setAttribute('data-index', '8');
+        btnMore.setAttribute('data-add-item', '2');
+
+    }else if (1024 < screenWidth && screenWidth < 1316 && qw != 1 && qw != 0) {
+        hideItem(8);
+        qw = 2;
+
+        let index = '9';
+        let indexItemClick = btnMore.getAttribute('data-index-click');
+        if(indexItemClick != null) {
+            index = indexItemClick;
+        }
+
+        // let indexRemoveHidden = Number(index) -1;
+        // console.log(indexRemoveHidden )
+        // hideItem(indexRemoveHidden);
+
+        btnMore.setAttribute('data-index', index);
+
+        // btnMore.setAttribute('data-index', '9');
+        btnMore.setAttribute('data-add-item', '3');
+
+    }
+
+    if(screenWidth > 1317 ){
+        removeHidden();
+        qw = 2;
+    }else if(screenWidth > 1025 && qw != 2){
+        removeHidden(8, 1025);
+
+        let index = '9';
+        let indexItemClick = btnMore.getAttribute('data-index-click');
+        if(indexItemClick != null) {
+            index = indexItemClick
+        }
+        // let indexRemoveHidden = Number(index) -1;
+        // removeHidden(indexRemoveHidden, 1025);
+
+        btnMore.setAttribute('data-index', index)
+
+        // btnMore.setAttribute('data-index', '9');
+        btnMore.setAttribute('data-add-item', '3');
+    }else if(screenWidth > 346 && qw != 2 && qw != 1){
+        removeHidden(3, 705);
+        // btnMore.classList.remove('hidden');
+
+        let index = '4';
+        let indexItemClick = btnMore.getAttribute('data-index-click');
+        if(indexItemClick != null) {
+            index = indexItemClick
+        }
+
+        // let indexRemoveHidden = Number(index) -1;
+        // removeHidden(indexRemoveHidden, 705);
+
+        btnMore.setAttribute('data-index', index)
+
+        // btnMore.setAttribute('data-index', '8');
+        btnMore.setAttribute('data-add-item', '2');
+    }
+}
+
+// ===================================
+
+
+
+btnMore.addEventListener('click', addItem);
+
+function addItem() {
+    let lengthPartnersItem = partnersItem.length;
+    let indexItem = '';
+
+    let indexItemClick = btnMore.getAttribute('data-index-click');
+    if(indexItemClick != null) {
+        indexItem = indexItemClick
+    }else {
+        indexItem = btnMore.getAttribute('data-index');
+    }
+    let dataAddItem = btnMore.getAttribute('data-add-item');
+    let addItem = '';
+    if(dataAddItem == 1) {
+        addItem = Number(dataAddItem)
+    }else {
+        addItem = Number(dataAddItem) -1;
+    }
+
+    let indexItemAdd = Number(indexItem ) + addItem;
+    partnersItem.forEach((item, index) => {
+        if(dataAddItem == 1) {
+            if( index == indexItem ) {
+                item.classList.remove('hidden');
+            }
+        }else{
+            if( index <= indexItemAdd && index >= indexItem ) {
+                item.classList.remove('hidden');
+            }
+        }
+
+    });
+
+
+    if(dataAddItem == 1){
+        indexItem = indexItemAdd;
+    }else {
+        indexItem = indexItemAdd + addItem;
+    }
+    console.log(indexItemAdd)
+    console.log(addItem)
+    console.log(indexItem)
+
+    btnMore.setAttribute('data-index', indexItem);
+    btnMore.setAttribute('data-index-click', indexItem);
+    btnMore.setAttribute('data-add-item', dataAddItem);
+
+    if(lengthPartnersItem <= indexItem) {
+        console.log(lengthPartnersItem + 1)
+        btnMore.classList.add('hidden');
+    }
+
+}
+
+// ==========================================
+
+
+
+// Popup contact us
+// =============================================
+
+const popupContactUs = document.querySelector('.popup-contact-us');
+const btnClosePopup = document.querySelector('.popup__close-btn');
+const btnHeader = document.querySelector('.btn-header');
+const btnTalk = document.querySelector('.let-is-talk__btn');
+const body = document.querySelector('body');
+
+function openPopupContactUs(event) {
+    event.preventDefault();
+    popupContactUs.classList.add('open');
+    body.classList.add('popup-open');
+}
+function closePopupContactUs() {
+    popupContactUs.classList.remove('open');
+    body.classList.remove('popup-open');
+
+}
+
+btnHeader.addEventListener('click', openPopupContactUs);
+btnTalk.addEventListener('click', openPopupContactUs);
+btnClosePopup.addEventListener('click', closePopupContactUs);
+document.addEventListener('click', (event)=>{
+    if(!event.target.closest(".popup__content") && !event.target.closest(".let-is-talk__btn") && !event.target.closest(".btn-header")) {
+        closePopupContactUs();
+    }
+});
+// ==========================================

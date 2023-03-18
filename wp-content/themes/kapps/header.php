@@ -9,6 +9,7 @@
 </head>
 <body <?php body_class() ?>>
 <header>
+    <span class="top-hidden" id="topHidden">up</span>
     <div class="header" id="header">
         <div class="container">
             <div class="header__wrapper">
