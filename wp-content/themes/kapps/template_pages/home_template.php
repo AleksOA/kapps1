@@ -155,12 +155,9 @@
             <div class="container">
                 <?php
                 $section_title_home_achievement = get_field('section_title_home_achievement');
-
                 ?>
-
                 <div class="achievement__wrapper">
                     <h2 class="achievement__title">
-
                         <?php if( $section_title_home_achievement ) { echo $section_title_home_achievement ;} ?>
                     </h2>
                     <div class="achievement__items">
@@ -184,8 +181,59 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section>
+        <?php
+        $section_title_home_partners = get_field('section_title_home_partners');
+        ?>
+        <div class="partners">
+            <div class="partners__image">
+                <object class="partners__img" type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/assets/images/home/partners_background.svg' ?>"></object>
+            </div>
+            <div class="partners__wrapper">
+                <div class="container">
+                    <h2 class="partners__title">
+                        <?php if( $section_title_home_partners ) { echo $section_title_home_partners ;} ?>
+                    </h2>
+                    <div class="partners__items">
+                        <?php
+                        $logo_home_partners = get_field('logo_home_partners');
+                        if($logo_home_partners): foreach ($logo_home_partners as $item) :
+                            if($item["logo_image_home_partners"] == false){
+                                $logo_image_home_partners_url = false;
+                                $logo_image_home_partners_alt = false;
+                            } else{
+                                $logo_image_home_partners_url = $item["logo_image_home_partners"]["url"];
+                                $logo_image_home_partners_alt = $item["logo_image_home_partners"]["alt"];
+                            }
 
+                            ?>
+                                <div class="partner__item hidden">
+                                    <div class="partner__item-body">
+                                        <div class="partner__item-cover"></div>
+                                        <?php if( $logo_image_home_partners_url != false) :
+                                            echo '<div class="partner__item-logo">';
+                                                echo '<img class="partner__item-logo-img"';
+                                                    echo 'src="' . $logo_image_home_partners_url . '"';
+                                                    echo 'alt="' . $logo_image_home_partners_alt . '"';
+                                                echo '>';
+                                            echo '</div>';
+                                         endif; ?>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                    <div class="partner__button">
+                        <button class="partner__btn-more hidden2">Show more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section>
+        <?php  get_template_part( 'contacts_part' );  ?>
     </section>
 
 </main>

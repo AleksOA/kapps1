@@ -68,6 +68,17 @@
             </div>
 
         </footer>
+        <div class="btn-up">
+            <a class="btn-up__link btn-primary-link" href="#topHidden">
+                <span class="btn-up__span">UP</span>
+            </a>
+        </div>
+        <div>
+            <?php  get_template_part( 'social_widget_part' );  ?>
+        </div>
+        <div class="popup-contact-us">
+            <?php  get_template_part( 'contact_us_popup_part' );  ?>
+        </div>
 
     <?php wp_footer(); ?>
     </body>
