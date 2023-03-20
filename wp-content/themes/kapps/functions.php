@@ -83,9 +83,31 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 //======================================
 
 
-
+//==================================================
 add_action( 'after_setup_theme', 'register_my_menu' );
 function register_my_menu(){
     register_nav_menu('header_menu', 'Header menu');
     register_nav_menu('footer_menu', 'Footer menu');
 }
+// ====================================================
+
+
+
+
+// ==================================================================
+add_action('after_setup_theme', 'register_theme_support');
+
+function register_theme_support () {
+    add_theme_support( 'post-thumbnails', array( 'portfolio' ) );
+}
+// ==================================================================
+
+// ==================================================================
+add_image_size( 'thumb-portfolio', 553, 345, true );
+add_image_size( 'thumb-slider', 400, 280, true );
+
+
+
+// ==================================================================
+
+

@@ -1195,6 +1195,94 @@ Social widget finish*/
 /*============================================
 Services menu finish*/
 
+
+/* Recent projects start
+============================================*/
+.recent-projects {}
+
+.recent-projects__background {
+    position: relative;
+    width: 100%;
+    height: 42vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat ;
+    padding: 250px 0;
+}
+
+
+.recent-projects__title {
+    text-align: center;
+    margin-bottom: 99px;
+}
+.recent-projects .container{
+    max-width: 1440px;
+}
+
+.recent-projects__slick {
+    position: relative;
+}
+.recent-projects__slick .slick-list {
+    overflow: hidden;
+    padding: 10px 0;
+}
+.recent-projects__slick-item {
+    max-width: 400px;
+    background: #FFFFFF;
+    box-shadow: 0 3px 16px 2px rgba(29, 51, 107, 0.15);
+    border-radius: 16px;
+    margin: 0 40px;
+
+}
+.recent-projects__slick-item-wrapper {
+
+
+}
+.recent-projects__slick-item-image {
+    width: 100%;
+    height: auto;
+
+}
+.recent-projects__slick-item-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px 16px 0 0;
+}
+.recent-projects__slick-item-content {
+    padding: 16px;
+
+}
+.recent-projects__slick-item-content-title {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+.recent-projects__slick-item-content-text {
+}
+
+.recent-projects .slick-arrow {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%) rotate(45deg);
+    font-size: 0;
+    width: 25px;
+    height: 25px;
+    border-left: 8px solid #84B5FF;
+    border-bottom: 8px solid #84B5FF;
+
+}
+.recent-projects .slick-prev.slick-arrow{
+    left: 0;
+}
+.recent-projects .slick-next.slick-arrow{
+    right: 0;
+    transform: translateY(-50%) rotate(-135deg);
+}
+
+
+/*============================================
+Recent projects finish*/
+
 /*==============================================================================================
 Global sections finish*/
 
@@ -2243,6 +2331,14 @@ Let's talk finish*/
 
 /* Contacts start
 ============================================*/
+@media(max-width: 1340px){
+    .contacts__bottom-two-item-image {
+        right: 0;
+        max-width: 500px;
+        max-height: 370px;
+    }
+}
+
 @media(max-width: 1010px){
     .contacts__bottom {
         flex-direction: column;
@@ -2418,10 +2514,131 @@ Contacts finish*/
         height: 198px;
     }
 }
-
-
 /*============================================
 Services menu finish*/
+
+
+/* Recent projects start
+============================================*/
+@media(max-width: 3000px){
+    .recent-projects__background {
+        height: 17vw;
+        padding: 772px 0;
+    }
+}
+
+@media(max-width: 2540px){
+    .recent-projects__background {
+        height: 29vw;
+        padding: 516px 0;
+    }
+
+    .recent-projects__background {
+        height: 17vw;
+        padding: 772px 0;
+    }
+}
+
+@media(max-width: 2000px){
+    .recent-projects__background {
+        padding: 250px 0;
+        height: 42vw;
+    }
+}
+
+@media(max-width: 1490px){
+    .recent-projects .slick-next.slick-arrow {
+        right: -20px;
+    }
+    .recent-projects .slick-prev.slick-arrow {
+        left: -20px;
+    }
+
+    .recent-projects__slick-item {
+        max-width: none;
+    }
+
+
+    .recent-projects__slick-item {
+        max-width: none;
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 30px;
+    }
+    .recent-projects__slick-item-wrapper {
+        background: #FFFFFF;
+        box-shadow: 0 3px 16px 2px rgba(29, 51, 107, 0.15);
+        border-radius: 16px;
+        margin: 0;
+    }
+    .recent-projects .container {
+        max-width: 1222px;
+    }
+}
+
+@media(max-width: 1340px){
+    .recent-projects__title {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 1000px){
+    .recent-projects .container {
+        max-width: 800px;
+    }
+    .recent-projects__slick-item-content-title {
+        font-size: 16px;
+    }
+    .recent-projects__background {
+        padding: 93px 0 250px 0;
+    }
+    .recent-projects__slick-item {
+        padding: 20px;
+    }
+}
+
+@media(max-width: 840px){
+    .recent-projects .container {
+        max-width: 640px;
+    }
+}
+
+@media(max-width: 600px){
+    .recent-projects .slick-track {
+        display: block;
+    }
+    .recent-projects__title {
+        margin-bottom: 40px;
+        font-size: 22px;
+        line-height: 24px;
+    }
+    .recent-projects {
+        height: 1860px;
+    }
+    .recent-projects__slick-item {
+        padding: 20px 0;
+    }
+
+}
+
+@media(max-width: 430px){
+    .recent-projects__slick-item {
+        height: 450px;
+        padding: 12px 0;
+    }
+    .recent-projects__slick-item-content-title {
+        font-size: 19px;
+        line-height: 20px;
+    }
+    .recent-projects {
+        height: 1592px;
+    }
+}
+/*============================================
+Recent projects finish*/
+
 
 /* ==============================================================================================
 Global sections finish*/
