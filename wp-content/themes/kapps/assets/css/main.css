@@ -1278,10 +1278,116 @@ Services menu finish*/
     right: 0;
     transform: translateY(-50%) rotate(-135deg);
 }
+/*============================================
+Recent projects finish*/
+
+
+/* FAQ start
+============================================*/
+.faq {}
+.faq__wrapper {
+    max-width: 894px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+.faq__section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.faq__questions {
+    position: relative;
+    list-style: none;
+    margin-bottom: 68px;
+}
+.faq__questions:before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: -60px;
+    width: 28px;
+    height: 89%;
+    border-left: 6px solid #66D6A0;
+    border-top: 6px solid #66D6A0;
+    border-bottom: 6px solid #66D6A0;
+    border-radius: 16px 0 0 16px;
+}
+.faq__questions:after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: -60px;
+    width: 28px;
+    height: 89%;
+    border-right: 6px solid #66D6A0;
+    border-top: 6px solid #66D6A0;
+    border-bottom: 6px solid #66D6A0;
+    border-radius: 0 16px 16px 0;
+}
+
+.faq__question-item {
+    margin-bottom: 26px;
+}
+.faq__question-item:last-child {
+    margin-bottom: 0;
+}
+.faq__question-item-text {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #0D6EB7;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.faq__question-item-text:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 12px;
+    height: 12px;
+    background-color: #0D6EB7;
+    border-radius: 50%;
+}
+
+.faq__answers {}
+.faq__answer-item {
+    border-bottom: 1px solid #0d6eb775;
+    margin-bottom: 15px;
+    padding-left: 35px;
+}
+.faq__answer-item:last-child {
+    margin-bottom: 0;
+}
+.faq__answer-item-question {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #242424;
+    margin-bottom: 15px;
+}
+.faq__answer-item-question:before {
+    content: '';
+    position: absolute;
+    left: -32px;
+    top: 12px;
+    width: 9px;
+    height: 9px;
+    border-right: 4px solid #242424;
+    border-top: 4px solid #242424;
+    transform: rotate(-45deg);
+}
+.faq__answer-item-answer {
+    margin-bottom: 15px;
+}
+
 
 
 /*============================================
-Recent projects finish*/
+FAQ finish*/
 
 /*==============================================================================================
 Global sections finish*/
@@ -2639,6 +2745,52 @@ Services menu finish*/
 /*============================================
 Recent projects finish*/
 
+/* FAQ start
+============================================*/
+@media(max-width: 830px){
+    .faq__questions:after {
+        height: 92%;
+    }
+    .faq__questions:before {
+        height: 92%;
+    }
+}
+
+@media(max-width: 600px){
+    .faq__questions:after {
+        right: -25px;
+        width: 13px;
+        height: 93%;
+    }
+    .faq__questions:before {
+        left: -25px;
+        width: 13px;
+        height: 93%;
+    }
+    .faq__wrapper {
+        padding: 0 8px;
+    }
+    .faq__section-title {
+        margin-bottom: 38px;
+        margin-top: 10px;
+        font-size: 22px;
+        line-height: 24px;
+    }
+}
+
+@media(max-width: 410px){
+    .faq__questions:after {
+        height: 96%;
+    }
+    .faq__questions:before {
+        height: 96%;
+    }
+}
+
+
+
+/*============================================
+FAQ finish*/
 
 /* ==============================================================================================
 Global sections finish*/

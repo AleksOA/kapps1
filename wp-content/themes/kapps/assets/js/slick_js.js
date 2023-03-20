@@ -51,3 +51,26 @@ $(document).ready(function () {
     });
 });
 
+
+
+
+// FAQ'S start
+// =================================================
+$(document).ready(function() {
+    $('.faq__answer-item').slideUp(500);
+    $('.faq__question-item-text').on('click', f_acc);
+});
+
+
+function f_acc(){
+    var index = $('h5').index(this);
+    var answer = $('.faq__answer-item').eq(index);
+
+    $('.faq__answer-item').slideUp(500);
+
+    setTimeout(function() {
+        $(answer).slideDown(800);
+    }, 500);
+}
+// =================================================
+// FAQ'S finish

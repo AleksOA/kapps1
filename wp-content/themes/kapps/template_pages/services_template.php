@@ -19,7 +19,7 @@
     </section>
 
     <section>
-        <div class="services-text">
+        <div class="services-text">`
             <div class="container">
                 <div class="services-text__wrapper">
                     <div class="services-text__item-one">
@@ -45,6 +45,10 @@
 
     <section>
         <?php  get_template_part( 'recent_projects_part' );  ?>
+    </section>
+
+    <section>
+        <?php  get_template_part( 'faq_part' );  ?>
     </section>
 
 </main>

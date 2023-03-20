@@ -8,7 +8,7 @@
             if($icon_of_social_network && $link_of_social_network ) :
             ?>
                 <div class="social__item">
-                    <a class="social__item-link" href="<?php if( $link_of_social_network ) { echo $link_of_social_network ;} ?>">
+                    <a class="social__item-link" target=»_blank href="<?php if( $link_of_social_network ) { echo $link_of_social_network ;} ?>">
                         <object class="social__item-img" type="image/svg+xml" data="<?php if( $icon_of_social_network ) { echo $icon_of_social_network ;} ?>"></object>
                     </a>
                 </div>
