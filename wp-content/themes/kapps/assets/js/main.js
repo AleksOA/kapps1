@@ -13,7 +13,6 @@ function menuHeader(){
     let btnHeader = document.querySelector('.btn-header');
     let headerMenu = document.querySelector('.header-menu');
     let btnUp = document.querySelector('.btn-up');
-    console.log(btnUp)
 
 
 
@@ -112,7 +111,10 @@ function  hideItem(data){
 }
 
 
-firstRendering(screenWidth);
+if(partnersItem.length != 0 && btnMore != null ) {
+    firstRendering(screenWidth);
+}
+
 function firstRendering(screenWidth1){
     if ( screenWidth1 < 346  ) {
         removeHidden();
@@ -143,7 +145,10 @@ function firstRendering(screenWidth1){
 
 
 
-window.addEventListener("resize", toggleItem);
+if(partnersItem.length != 0 && btnMore != null ) {
+    window.addEventListener("resize", toggleItem);
+}
+
 
 function toggleItem() {
     let screenWidth = document.documentElement.clientWidth;
@@ -243,8 +248,9 @@ function toggleItem() {
 // ===================================
 
 
-
-btnMore.addEventListener('click', addItem);
+if(partnersItem.length != 0 && btnMore != null ) {
+    btnMore.addEventListener('click', addItem);
+}
 
 function addItem() {
     let lengthPartnersItem = partnersItem.length;
