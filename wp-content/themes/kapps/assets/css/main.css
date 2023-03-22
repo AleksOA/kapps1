@@ -1383,12 +1383,91 @@ Recent projects finish*/
 .faq__answer-item-answer {
     margin-bottom: 15px;
 }
-
-
-
 /*============================================
 FAQ finish*/
 
+
+/* Serv tech start
+============================================*/
+.serv-tech {
+    margin-bottom: 80px;
+}
+.serv-tech__wrapper {
+    max-width: 1245px;
+    padding-top: 123px;
+}
+.serv-tech__section-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.serv-tech__section-one-left {}
+
+#breadcrumbs{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 121px;
+
+}
+.serv-tech__breadcrumbs-separator {
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid #194484;
+    border-top: 2px solid #194484;
+    transform: rotate(45deg);
+    margin: 0 8px;
+}
+#breadcrumbs li a{
+    color: #194484;
+    text-decoration: none;
+
+}
+#breadcrumbs li strong{
+    color: #194484;
+    font-weight: 400;
+}
+
+.serv-tech__section-title {
+    margin-bottom: 241px;
+}
+.serv-tech__section-one-right {}
+.serv-tech__image-wrapper {
+
+}
+.serv-tech__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.serv-tech__section-two {
+    display: flex;
+    justify-content: space-between;
+
+}
+.serv-tech__content-one {
+    width: 44.42%;
+}
+.serv-tech__content-one h3,
+.serv-tech__content-two h3{
+    margin-bottom: 16px;
+}
+.serv-tech__content-one p,
+.serv-tech__content-two p{
+    margin-bottom: 25px;
+}
+.serv-tech__content-one p:last-child,
+.serv-tech__content-two p:last-child{
+    margin-bottom: 0;
+}
+.serv-tech__content-two {
+    width: 44.42%;
+}
+
+/*============================================
+Serv tech finish*/
 /*==============================================================================================
 Global sections finish*/
 
@@ -2787,11 +2866,75 @@ Recent projects finish*/
         height: 96%;
     }
 }
-
-
-
 /*============================================
 FAQ finish*/
+
+
+/* Serv tech start
+============================================*/
+@media(max-width: 1160px){
+    #breadcrumbs {
+        margin-bottom: 80px;
+    }
+
+    .serv-tech__section-one {
+        align-items: flex-start;
+    }
+}
+@media(max-width: 840px){
+    .serv-tech__section-title {
+        margin-bottom: 156px;
+        font-size: 32px;
+        line-height: 38px;
+    }
+}
+@media(max-width: 715px){
+    .serv-tech__section-one {
+        display: block;
+    }
+    .serv-tech__section-title {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .serv-tech__section-two {
+        flex-direction: column;
+    }
+    .serv-tech__content-one {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .serv-tech__content-two {
+        width: 100%;
+    }
+    .serv-tech__content-one h3, .serv-tech__content-two h3 {
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    #breadcrumbs {
+        margin-bottom: 36px;
+    }
+}
+
+@media(max-width: 600px) {
+    .serv-tech__section-title {
+        font-size: 24px;
+    }
+    .serv-tech__content-one h3, .serv-tech__content-two h3 {
+        font-size: 20px;
+    }
+    .serv-tech__wrapper {
+        padding-top: 100px;
+    }
+}
+
+@media(max-width: 370px) {
+    .serv-tech .container {
+        padding: 0 10px;
+    }
+}
+
+/*============================================
+Serv tech finish*/
 
 /* ==============================================================================================
 Global sections finish*/
@@ -3292,26 +3435,47 @@ Global sections finish*/
         max-height: 80px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*===========================================
 Home finish*/
 
+/*Services start
+===================================================*/
+/*Section text
+=============================*/
+@media(max-width: 715px){
+    .services-text__wrapper {
+        flex-direction: column;
+    }
+    .services-text__item-one {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    .services-text__item-two {
+        width: 100%;
+    }
+    .services-text__item-one h3,
+    .services-text__item-two h3 {
+        text-align: center;
+    }
+}
+
+@media(max-width: 600px){
+    .services-text__item-one h3,
+    .services-text__item-two h3 {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 370px){
+    .services-text .container{
+        padding: 0 10px;
+    }
+}
 
 
+/*===================================================
+Services finish*/
 
 /*=======================================================
 Adaptation finish*/
