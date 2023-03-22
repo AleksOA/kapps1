@@ -1,7 +1,7 @@
 <?php
 /*
- Template Name: Services
- layout Template Post Type: services
+ Template Name: Technologies
+ layout Template Post Type: technologies
  */
 ?>
 
@@ -10,10 +10,10 @@
     <section>
 
         <?php
-        $section_service_services = get_field('section_service_services');
+        $section_technologies_technologies = get_field('section_technologies_technologies');
 
         $args = array(
-            'section_data' => $section_service_services
+            'section_data' => $section_technologies_technologies
         );
         get_template_part( 'service_and_technologies_part', null, $args);
         ?>
@@ -32,14 +32,14 @@
                 <div class="services-text__wrapper">
                     <div class="services-text__item-one">
                         <?php
-                        $item_one_services_text = get_field('item_one_services_text');
-                        if( $item_one_services_text ) { echo $item_one_services_text;}
+                        $item_one_technologies_text = get_field('item_one_technologies_text');
+                        if( $item_one_technologies_text ) { echo $item_one_technologies_text;}
                         ?>
                     </div>
                     <div class="services-text__item-two">
                         <?php
-                        $item_two_services_text = get_field('item_two_services_text');
-                        if( $item_two_services_text ) { echo $item_two_services_text;}
+                        $item_two_technologies_text = get_field('item_two_technologies_text');
+                        if( $item_two_technologies_text ) { echo $item_two_technologies_text;}
                         ?>
                     </div>
                 </div>
@@ -61,3 +61,4 @@
 
 </main>
 <?php get_footer(); ?>
+
