@@ -1389,6 +1389,9 @@ FAQ finish*/
 
 /* Serv tech start
 ============================================*/
+.section__top {
+    padding-top: 123px;
+}
 .serv-tech {
     margin-bottom: 80px;
 }
@@ -1963,9 +1966,166 @@ Home finish*/
 .services-text__item-two {
     width: 40.66%;
 }
-
 /*============================================
 Services finish*/
+
+
+/* Portfolio start
+============================================*/
+.portfolio__posts {
+    margin-bottom: 120px;
+}
+.portfolio__posts-wrapper {
+    max-width: 1130px;
+    margin: 0 auto;
+}
+.portfolio__posts-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0 3px 16px rgba(29, 51, 107, 0.15);
+    border-radius: 12px;
+    margin-bottom: 74px;
+}
+.portfolio__posts-item:last-child {
+    margin-bottom: 0;
+}
+
+.portfolio__posts-item-section-one{
+    width: 48.94%;
+    order: 1;
+}
+.portfolio__posts-item-image {
+    max-width: 553px;
+    height: auto;
+}
+.portfolio__posts-item-image img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px 0 0 12px;
+}
+.portfolio__posts-item-section-two {
+    margin: 24px 18px 0 16px;
+    width: 47%;
+    order: 2;
+}
+
+.portfolio__posts-item-section-right-title {
+    margin-bottom: 8px;
+}
+
+.portfolio__posts-item-section-two div {
+    margin-bottom: 20px;
+}
+.portfolio__posts-item-section-two div:last-child {
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+.portfolio__posts-item.right .portfolio__posts-item-section-one{
+    order: 2;
+}
+.portfolio__posts-item.right .portfolio__posts-item-section-two{
+    order: 1;
+}
+
+.portfolio__posts-item.right .portfolio__posts-item-image img{
+    border-radius: 0 12px 12px 0;
+}
+/*============================================
+Portfolio finish*/
+
+/* Products start
+============================================*/
+.products__storage {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 0;
+}
+
+
+.products__posts{
+    margin: 120px 0 120px 0;
+}
+.products__posts-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.products__posts-item {
+    margin-bottom: 80px;
+}
+.products__posts-item-wrapper {
+    max-width: 400px;
+    background: #FFFFFF;
+    box-shadow: 0 3px 16px 2px rgba(29, 51, 107, 0.15);
+    border-radius: 16px;
+}
+.products__posts-item-image {}
+.products__posts-item-image img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px 16px 0 0;
+}
+.products__posts-item-text {
+    padding: 16px 16px 20px 16px;
+}
+.products__posts-item-section-right-title {
+    margin-bottom: 8px;
+    font-size: 23px;
+}
+
+
+
+.products__button {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 47px;
+
+}
+.products__btn-more {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 26px;
+    color: #194484;
+    position: relative;
+    padding-right: 24px;
+}
+.products__btn-more.hidden {
+    display: none;
+}
+
+.products__btn-more.hidden2{
+    display: none;
+}
+
+.products__btn-more:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #194484;
+    border-bottom: 2px solid #194484;
+    transform: rotate(-45deg);
+}
+/*============================================
+Products finish*/
+
 
 
 /*Adaptation start
@@ -2613,7 +2773,6 @@ Social widget finish*/
         padding: 14px 11px 6px 11px;
     }
 }
-
 /*===================================
 BTN UP finish*/
 /*============================================
@@ -2923,6 +3082,9 @@ FAQ finish*/
         font-size: 20px;
     }
     .serv-tech__wrapper {
+        padding-top: 100px;
+    }
+    .section__top {
         padding-top: 100px;
     }
 }
@@ -3472,11 +3634,58 @@ Home finish*/
         padding: 0 10px;
     }
 }
-
-
 /*===================================================
 Services finish*/
 
+/* Products start
+============================================*/
+@media(max-width: 1260px){
+    .products__posts-wrapper {
+        justify-content: space-around;
+    }
+}
+
+@media(max-width: 910px){
+    .products__posts-item-wrapper {
+        max-width: 320px;
+    }
+    .products__posts-item-section-right-title {
+        font-size: 18px;
+    }
+}
+@media(max-width: 725px){
+    .products__button {
+        display: flex;
+    }
+}
+
+@media(max-width: 600px){
+    .products__posts-item {
+        margin-bottom: 40px;
+    }
+    .products__btn-more {
+        font-size: 16px;
+        padding-right: 15px;
+    }
+    .products__btn-more:before {
+        top: 8px;
+        width: 5px;
+        height: 5px;
+    }
+    .products__button {
+        margin-top: 0;
+    }
+}
+
+@media(max-width: 410px){
+    .products__posts .container {
+        padding: 0 10px;
+    }
+}
+
+
+/*===================================================
+Products finish*/
 /*=======================================================
 Adaptation finish*/
 
