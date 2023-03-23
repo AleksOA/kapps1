@@ -17,7 +17,7 @@ add_action('wp_footer', 'scripts_theme');
 function scripts_theme() {
     wp_enqueue_script('slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js');
     wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/4a11c97cb2.js');
-    wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/jquery.js');
+//    wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/jquery.js');
     wp_enqueue_script('slick_js', get_template_directory_uri() . '/assets/js/slick_js.js');
     wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/main.js');
 
@@ -99,6 +99,7 @@ add_action('after_setup_theme', 'register_theme_support');
 
 function register_theme_support () {
     add_theme_support( 'post-thumbnails', array( 'portfolio' ) );
+    add_theme_support( 'post-thumbnails', array( 'products' ) );
 }
 // ==================================================================
 
@@ -358,3 +359,75 @@ function custom_breadcrumbs() {
     }
 }
 // ==================================
+
+
+// =========================================
+/**
+ * Filter the except length to 18 words.
+
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 18;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
+function new_excerpt_more($more) {
+    global $post;
+    return '';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+// =========================================
+
+
+
+// AJAX products
+if( wp_doing_ajax() ){
+    add_action( 'wp_ajax_nextPost', 'display_post' );
+    add_action( 'wp_ajax_nopriv_nextPost', 'display_post' );
+}
+
+
+function display_post() {
+
+    $paged = $_POST['paged'];
+    $posts_per_page = $_POST['postsPerPage'];
+
+
+
+
+    $args = array(
+            'posts_per_page' => $posts_per_page,
+            'post_type' => 'products',
+            'posts_status' => 'publish',
+            'paged' => $paged
+        );
+
+
+
+    $posts = new WP_Query( $args);
+    $max_pages = $posts->max_num_pages;
+
+    echo '<span class="products__storage" id="productsStorage" data-max-pages="' . $max_pages . '"></span>';
+
+    if ($posts->have_posts() ) :
+        while ( $posts->have_posts()  ) : $posts->the_post();
+
+            get_template_part( 'products_post_part' );
+
+        endwhile;
+    endif;
+    wp_die();
+}
+
+add_action('wp_enqueue_scripts', 'my_assets');
+
+function my_assets(){
+//    wp_enqueue_script('jquer', get_template_directory_uri() . '/assets/js/jquer.js', array('jquery'));
+    wp_enqueue_script('jquer', get_template_directory_uri() . '/assets/js/jquery.js', array('jquery'));
+    wp_localize_script('jquer', 'ajaxData', array(
+            'ajaxurl' => admin_url('admin-ajax.php'),
+        )
+    );
+}
+// =============================================================================
