@@ -21,20 +21,7 @@
         <div class="products__posts">
             <div class="container">
                 <div class="products__posts-wrapper" id="productsPosts">
-<!--                    --><?php
-//                    $request = array(
-//                        'posts_per_page' => '',
-//                        'post_type' => 'products',
-//                        'post_status' => 'publish',
-//                        'paged' => ''
-//                    );
-//                    $posts  = new WP_Query($request);
-//
-//                    if ( $posts ) : while ( $posts->have_posts() ) : $posts->the_post();
-//                             get_template_part( 'products_post_part' );
-//                        endwhile;
-//                        wp_reset_query();
-//                    endif; ?>
+
                 </div>
                 <div class="products__button">
                     <button class="products__btn-more" id="productsBtnMore">Show more</button>

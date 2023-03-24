@@ -898,6 +898,11 @@ Let's talk finish*/
     max-width: 1128px;
     margin: 0 auto 430px auto;
 }
+
+.page-template-about_us_template .contacts__wrapper {
+    margin: 0 auto 100px auto;
+}
+
 .contacts__title {
     text-align: center;
     margin-bottom: 60px;
@@ -1198,7 +1203,11 @@ Services menu finish*/
 
 /* Recent projects start
 ============================================*/
-.recent-projects {}
+
+.page-template-about_us_template .recent-projects {
+    margin-bottom: -200px;
+}
+
 
 .recent-projects__background {
     position: relative;
@@ -1404,7 +1413,9 @@ FAQ finish*/
     justify-content: space-between;
     align-items: center;
 }
-.serv-tech__section-one-left {}
+.serv-tech__section-one-left {
+    width: 50%;
+}
 
 #breadcrumbs{
     list-style: none;
@@ -1434,6 +1445,9 @@ FAQ finish*/
 
 .serv-tech__section-title {
     margin-bottom: 241px;
+}
+.serv-tech__section-title strong {
+    color: #0D6EB7;
 }
 .serv-tech__section-one-right {}
 .serv-tech__image-wrapper {
@@ -2126,6 +2140,92 @@ Portfolio finish*/
 /*============================================
 Products finish*/
 
+/* About us start
+============================================*/
+/*Our story
+==========================*/
+.story {}
+.story__section-one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1210px;
+}
+.story__section-one-left {
+    padding-left: 40px;
+}
+.story__section-one-image {}
+.story__section-one-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.story__section-one-right {
+    width: 46%;
+}
+.story__section-one-right p{
+    margin-bottom: 24px;
+}
+.story__section-one-right p:last-child{
+    margin-bottom: 0;
+}
+
+.story__section-two {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1210px;
+
+}
+.story__section-two-left {
+    padding-left: 63px;
+    margin-top: 67px;
+    width: 46%;
+}
+
+.story__section-two-left p{
+    margin-bottom: 20px;
+}
+.story__section-two-left h6{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #0D6EB7;
+}
+.story__section-two-right {
+}
+.story__section-two-image {}
+.story__section-two-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/*Our mission
+==========================*/
+.mission {
+    margin-top: -120px;
+    margin-bottom: 120px;
+}
+.mission__wrapper {
+    max-width: 1210px;
+    display: flex;
+}
+.mission__content {
+    padding-left: 63px;
+    width:45%;
+}
+.mission__content h5{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 34px;
+    color: #0D6EB7;
+    margin-bottom: 18px;
+}
+
+/*============================================
+About us finish*/
 
 
 /*Adaptation start
@@ -2300,12 +2400,7 @@ Products finish*/
     .home .header__wrapper {
         height: 60px;
     }
-
-
-
 }
-
-
 /*Footer start
 =========================================*/
 @media(max-width: 2700px){
@@ -2922,6 +3017,14 @@ Services menu finish*/
     }
 }
 
+@media(max-width: 1400px){
+    .page-template-about_us_template .recent-projects {
+        margin-bottom: -50px;
+    }
+}
+
+
+
 @media(max-width: 1340px){
     .recent-projects__title {
         margin-bottom: 30px;
@@ -2946,6 +3049,9 @@ Services menu finish*/
 @media(max-width: 840px){
     .recent-projects .container {
         max-width: 640px;
+    }
+    .page-template-about_us_template .recent-projects {
+        margin-bottom: 0;
     }
 }
 
@@ -3035,6 +3141,11 @@ FAQ finish*/
     #breadcrumbs {
         margin-bottom: 80px;
     }
+    .serv-tech__section-title {
+        margin-bottom: 156px;
+        font-size: 32px;
+        line-height: 38px;
+    }
 
     .serv-tech__section-one {
         align-items: flex-start;
@@ -3050,6 +3161,9 @@ FAQ finish*/
 @media(max-width: 715px){
     .serv-tech__section-one {
         display: block;
+    }
+    .serv-tech__section-one-left {
+        width: 100%;
     }
     .serv-tech__section-title {
         margin-bottom: 20px;
@@ -3682,10 +3796,109 @@ Services finish*/
         padding: 0 10px;
     }
 }
-
-
 /*===================================================
 Products finish*/
+
+/* About us start
+============================================*/
+/*Our story
+==========================*/
+@media(max-width: 1120px){
+    .story__section-one-left {
+        padding-left: 0;
+    }
+    .story__section-two-left {
+        padding-left: 0;
+    }
+}
+
+@media(max-width: 900px){
+    .story__section-two-left {
+        width: 75%;
+    }
+}
+
+@media(max-width: 840px){
+    .story__section-one-right {
+        width: 80%;
+    }
+    .story__section-two-left {
+        width: 80%;
+    }
+}
+@media(max-width: 700px){
+    .story__section-one {
+        flex-direction: column;
+    }
+    .story__section-one-left {
+        order: 2;
+    }
+    .story__section-one-right {
+        width: 100%;
+    }
+    .story__section-two {
+        flex-direction: column;
+    }
+    .story__section-two-left {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .story__section-two-left {
+        margin-top: 30px;
+    }
+    .story__section-one-right {
+        margin-bottom: 30px;
+    }
+}
+
+
+/*Our mission
+==========================*/
+@media(max-width: 1120px){
+    .mission {
+        margin-top: -80px;
+    }
+    .mission__content {
+        padding-left: 0;
+    }
+}
+
+@media(max-width: 1014px){
+    .mission {
+        margin-top: -20px;
+    }
+}
+
+@media(max-width: 900px){
+    .mission {
+        margin-top: 24px;
+    }
+    .mission__content {
+        width: 80%;
+    }
+}
+
+@media(max-width: 870px){
+    .mission {
+        margin-top: 24px;
+    }
+}
+
+@media(max-width: 700px){
+    .mission__content {
+        width: 100%;
+    }
+    .mission {
+        margin-bottom: 60px;
+    }
+}
+
+@media(max-width: 600px){
+    .mission__content h5 {
+        font-size: 18px;
+    }
+}
+
 /*=======================================================
 Adaptation finish*/
 
