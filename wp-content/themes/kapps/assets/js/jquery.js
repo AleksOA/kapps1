@@ -58,9 +58,6 @@ $(document).ready(function() {
 
 
 
-
-
-
     button.click(displayPosts);
     function displayPosts (event) {
 
