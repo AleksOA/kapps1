@@ -64,16 +64,11 @@ function return_svg( $img, $class = '', $size = 'medium' ) {
 }
 
 
-// Breadcrumbs
-// ==================================
-//$separator_url = get_template_directory_uri() . '/assets/images/sestions_free/breadcrumbs/Vector.png';
-//$myseparator = '<img class="breadcrumbs-img" src="' . $separator_url . '" alt=" Symbol more ">';
 
 // Breadcrumbs
 function custom_breadcrumbs() {
-//    global $myseparator;
     // Settings
-    $separator        = ' / ';
+    $separator        =  '<span class="serv-tech__breadcrumbs-separator"></span>';
     $breadcrums_id    = 'breadcrumbs';
     $breadcrums_class = 'breadcrumbs';
     $home_title       = 'Homepage';
