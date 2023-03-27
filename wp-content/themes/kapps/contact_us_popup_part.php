@@ -7,7 +7,10 @@
                 <button class="popup__close-btn"></button>
             </span>
             <section>
-                <?php  get_template_part( 'contact_form_part' );  ?>
+                <?php
+                $part = $args["section_data"];
+                get_template_part( $part );
+                ?>
             </section>
         </div>
     </div>

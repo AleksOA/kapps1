@@ -734,7 +734,8 @@ Header finish*/
     opacity: 0;
     transition: all 0.8s;
 }
-.popup-contact-us.open .popup{
+.popup-contact-us.open .popup,
+.popup-current-openings.open .popup{
     visibility: visible;
     opacity: 1;
 }
@@ -759,7 +760,8 @@ Header finish*/
     transition: all 0.8s;
 }
 
-.popup-contact-us.open .popup__content{
+.popup-contact-us.open .popup__content,
+.popup-current-openings.open .popup__content{
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
@@ -971,10 +973,7 @@ Let's talk finish*/
 .contacts__bottom-two-item-form{
 
 }
-/*.contacts {*/
-/*    position: relative;*/
-/*    display: inline-block;*/
-/*}*/
+
 .contacts .top {
     display: none;
 }
@@ -1432,6 +1431,7 @@ FAQ finish*/
     display: flex;
     align-items: center;
     margin-bottom: 121px;
+    flex-wrap: wrap;
 
 }
 .serv-tech__breadcrumbs-separator {
@@ -2423,6 +2423,258 @@ Contacts finish*/
 Team  finish*/
 
 
+/*Join the team start
+=================================================*/
+/*Section after section stop
+===============================*/
+.join-tex {
+
+}
+.join-text__wrapper {
+    max-width: 1242px;
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 120px 0;
+}
+.join-text__column-one {
+    width: 44.28%;
+}
+.join-text__column-one p,
+.join-text__column-two p{
+    margin-bottom: 20px;
+}
+
+.join-text__column-one p:last-child,
+.join-text__column-two p:last-child{
+    margin-bottom: 0;
+}
+.join-text__column-two {
+    width: 44.28%;
+}
+
+/* Section openings
+===============================*/
+.openings {}
+.openings__wrapper {
+    max-width: 1130px;
+    margin: 0 auto;
+}
+.openings__title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.openings__items {
+}
+.openings__item {
+    margin-bottom: 48px;
+    background: #FFFFFF;
+    box-shadow: 0 3px 16px rgba(29, 51, 107, 0.15);
+    border-radius: 12px;
+}
+.openings__item:last-child {
+    margin-bottom: 0;
+}
+.openings__item-one {
+    padding: 29px 69px 29px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.openings__item-title {
+    padding-left: 40px;
+    position: relative;
+    color: #194484;
+}
+
+.openings__item-title:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-left: 7px solid #194484;
+    border-bottom: 7px solid #194484;
+    top: 0;
+    left: 4px;
+    transform: rotate(-45deg);
+    transition: all 0.95s;
+}
+
+.openings__item-title.open:before {
+    transform: rotate(-225deg);
+    top: 11px;
+}
+
+
+.openings__item-btn {
+    padding: 3px 50px;
+}
+.openings__item-btn--first {
+}
+.openings__item-btn--second-wrapper {
+    padding: 0 16px 29px 16px;
+    display: none;
+}
+.openings__item-btn--second {
+    width: 100%;
+}
+.openings__item-two {
+}
+.openings__item-main-content {
+    padding: 23px 40px;
+    border-top: 1px solid #19448421;
+}
+.openings__item-main-content h4{
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 38px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #194484;
+    margin-bottom: 4px;
+}
+.openings__item-main-content ul{
+    margin-bottom: 50px;
+}
+
+.openings__item-main-content ul:last-child{
+    margin-bottom: 0;
+}
+
+.openings__item-main-content li{
+    position: relative;
+    list-style: none;
+    margin-bottom: 18px;
+    padding-left: 18px;
+}
+
+.openings__item-main-content li:last-child{
+    margin-bottom: 0;
+}
+
+.openings__item-main-content li:before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #0D6EB7;
+    left: 3px;
+    top: 10px;
+}
+
+
+/* Form openings
+===============================*/
+
+.form-join-team {
+    padding: 24px 40px 70px 40px;
+    background: #FFFFFF;
+    box-shadow: 0 3px 16px 2px rgba(29, 51, 107, 0.15);
+    border-radius: 6px;
+}
+.form-join-team__title {
+    text-align: center;
+    margin-bottom: 4px;
+}
+.form-join-team__opening-name {
+    text-align: center;
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 38px;
+}
+
+.form-join-team input,
+.form-join-team textarea {
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+
+}
+.form-join-team input::placeholder,
+.form-join-team textarea::placeholder{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #A9A9A9;
+}
+.form-join-team textarea {
+    margin-bottom: 30px;
+    padding: 7px 16px;
+    height: 80px;
+    resize: none;
+    cursor: text;
+    border: 1px solid #D7D7D7;
+}
+.form-join-team .form-join-team-name {
+    margin-bottom: 20px;
+    padding: 7px 16px;
+    cursor: text;
+    border: 1px solid #D7D7D7;
+}
+.form-join-team .form-join-jeame-email {
+    margin-bottom: 20px;
+    padding: 7px 16px;
+    cursor: text;
+    border: 1px solid #D7D7D7;
+}
+
+.form-join-team .form-join-team-url{
+    margin-bottom: 20px;
+    padding: 7px 16px;
+    cursor: text;
+    border: 1px solid #D7D7D7;
+}
+.form-join-team .form-Join-team-file{
+    margin-bottom: 20px;
+    padding: 7px 16px;
+    cursor: text;
+    border: 1px solid #D7D7D7;
+}
+
+.form-join-team-submit{
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #2DA531;
+    padding: 14px 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: 2px solid #2DA531;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+.form-join-team-submit:hover{
+    background-color: #0b9854;
+    border: 2px solid #0b9854;
+}
+
+.form-join-team-submit:active{
+    background: #0f874d;
+    border: 2px solid #0f874d;
+}
+.form-join-team .wpcf7-spinner {
+    display: none;
+}
+
+/*===========================*/
+
+
+
+
+
+/*=================================================
+Join the team finish*/
 
 
 
@@ -4246,6 +4498,99 @@ Contacts finish*/
 
 /*============================================
 Team  finish*/
+
+
+
+/*Join the team start
+=================================================*/
+/*Section after section stop
+===============================*/
+@media(max-width: 625px){
+    .join-text__wrapper {
+        margin: 40px 0 60px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    .join-text__column-one {
+        width: 100%;
+    }
+
+    .join-text__column-two {
+        width: 100%;
+    }
+}
+
+
+
+
+/* Section openings
+===============================*/
+
+@media(max-width: 710px){
+    .openings__item-one {
+        padding: 29px 16px 29px 16px;
+    }
+}
+
+@media(max-width: 625px){
+    .openings__title {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 22px;
+        line-height: 24px;
+    }
+}
+
+@media(max-width: 600px){
+    .openings__item-btn--first {
+        display: none;
+    }
+
+    .openings__item-btn--second-wrapper {
+        display: block;
+    }
+    .openings__item-main-content {
+        padding: 23px 16px;
+    }
+}
+
+@media(max-width: 445px){
+    .openings__item-title {
+        padding-left: 28px;
+        position: relative;
+        color: #194484;
+        font-size: 18px;
+    }
+    .openings__item-title:before {
+        width: 9px;
+        height: 9px;
+        border-left: 5px solid #194484;
+        border-bottom: 5px solid #194484;
+        top: 8px;
+        left: 4px;
+
+    }
+    .openings__item-title.open:before {
+        top: 17px;
+    }
+    .openings__item-main-content h4 {
+        font-size: 18px;
+    }
+    .form-join-team {
+        padding: 24px 23px 70px 23px;
+        background: #FFFFFF;
+        box-shadow: 0 3px 16px 2px rgba(29, 51, 107, 0.15);
+        border-radius: 6px;
+    }
+}
+
+@media(max-width: 360px){
+    .openings .container {
+        padding: 0 10px;
+    }
+}
+/*============================================
+Join the team   finish*/
 
 /*=======================================================
 Adaptation finish*/

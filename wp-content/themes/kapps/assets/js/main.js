@@ -330,11 +330,70 @@ function closePopupContactUs() {
 }
 
 btnHeader.addEventListener('click', openPopupContactUs);
-btnTalk.addEventListener('click', openPopupContactUs);
+if(btnTalk != null) { btnTalk.addEventListener('click', openPopupContactUs)}
 btnClosePopup.addEventListener('click', closePopupContactUs);
 document.addEventListener('click', (event)=>{
-    if(!event.target.closest(".popup__content") && !event.target.closest(".let-is-talk__btn") && !event.target.closest(".btn-header")) {
+    if(!event.target.closest(".popup__content") && !event.target.closest(".let-is-talk__btn") && !event.target.closest(".btn-header") && !event.target.closest(".openings__item-btn") ) {
         closePopupContactUs();
     }
 });
 // ==========================================
+
+
+// Join the team start
+// ==============================================
+const openingsItemBtn = document.querySelectorAll('.openings__item-btn--first');
+const openingsItemBtnSecond = document.querySelectorAll('.openings__item-btn--second');
+const popupCurrentOpenings = document.querySelector('.popup-current-openings');
+const btnClosePopupAll = document.querySelectorAll('.popup__close-btn');
+const formJoinOpeningName = document.getElementById('formJoinOpeningName');
+
+
+function openPopupCurrentOpenings(event) {
+    event.preventDefault();
+    if(this.closest('.openings__item-btn--first ') != null) {
+        let valueTitle = this.parentNode.querySelector('.openings__item-title').innerHTML;
+        formJoinOpeningName.innerHTML = valueTitle;
+    }
+
+    if(this.closest('.openings__item-btn--second ') != null) {
+        let valueTitle = this.parentNode.parentNode.parentNode.parentNode.querySelector('.openings__item-title').innerHTML;
+        formJoinOpeningName.innerHTML = valueTitle;
+    }
+
+    popupCurrentOpenings.classList.add('open');
+    body.classList.add('popup-open');
+}
+function closePopupCurrentOpenings() {
+    popupCurrentOpenings.classList.remove('open');
+    popupContactUs.classList.remove('open');
+    body.classList.remove('popup-open');
+
+}
+
+if(body.classList.contains('page-template-join_the_team')) {
+    btnClosePopupAll.forEach((item) =>{
+        item.addEventListener('click', closePopupCurrentOpenings);
+    })
+
+    document.addEventListener('click', (event)=>{
+        if(!event.target.closest(".popup__content") && !event.target.closest(".openings__item-btn") && !event.target.closest(".btn-header") ) {
+            closePopupCurrentOpenings();
+        }
+    });
+
+
+    if(openingsItemBtn != null){
+        openingsItemBtn.forEach((item) =>{
+            item.addEventListener('click', openPopupCurrentOpenings);
+        })
+    }
+
+    if(openingsItemBtnSecond != null){
+        openingsItemBtnSecond.forEach((item) =>{
+            item.addEventListener('click', openPopupCurrentOpenings);
+        })
+    }
+}
+// ==============================================
+// Join the team finish

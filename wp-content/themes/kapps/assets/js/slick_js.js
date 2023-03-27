@@ -75,5 +75,37 @@ function f_acc(){
 // =================================================
 // FAQ'S finish
 
+// Join the team start
+// =================================================
+$(document).ready(function() {
+    $('.openings__item-two-wrapper').slideUp(500);
+    $('.openings__item-title').on('click', f_acck);
+});
+
+
+function f_acck(){
+    var index = $('h3').index(this),
+        answer = $('.openings__item-two-wrapper').eq(index);
+        // answer = $('.openings__item-main-content').eq(index);
+
+
+    if ( answer.hasClass("open") ) {
+        $('.openings__item-two-wrapper').slideUp(500);
+        answer.removeClass("open");
+        $('.openings__item-title').removeClass("open");
+    }else {
+        $('.openings__item-two-wrapper').slideUp(500);
+        $('.openings__item-title').removeClass("open");
+
+        setTimeout(function() {
+            $(answer).slideDown(800);
+        }, 500);
+
+        answer.addClass("open");
+        $(this).addClass("open");
+    }
+}
+// =================================================
+// Join the team finish
 
 

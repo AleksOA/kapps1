@@ -77,7 +77,12 @@
             <?php  get_template_part( 'social_widget_part' );  ?>
         </div>
         <div class="popup-contact-us">
-            <?php  get_template_part( 'contact_us_popup_part' );  ?>
+            <?php
+            $args = array(
+                'section_data' => 'contact_form_part'
+            );
+            get_template_part( 'contact_us_popup_part', null, $args);
+            ?>
         </div>
 
     <?php wp_footer(); ?>
