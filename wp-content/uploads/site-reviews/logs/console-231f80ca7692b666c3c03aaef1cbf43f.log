@@ -1,0 +1,397 @@
+[2023-03-28 18:35:48] ERROR [Database:289] Can&#039;t DROP FOREIGN KEY `glsr_assigned_posts_rating_id_foreign`; check that it exists
+[2023-03-28 18:35:48] DEBUG [D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 290
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\AbstractTable.php
+        [line] =&gt; 95
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\TableAssignedPosts.php
+        [line] =&gt; 22
+        [function] =&gt; dropForeignConstraint
+        [class] =&gt; GeminiLabs\SiteReviews\Database\Tables\AbstractTable
+        [type] =&gt; -&gt;
+    )
+)
+[2023-03-28 18:35:48] ERROR [Database:289] Can&#039;t DROP FOREIGN KEY `glsr_assigned_posts_post_id_foreign`; check that it exists
+[2023-03-28 18:35:48] DEBUG [D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 290
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\AbstractTable.php
+        [line] =&gt; 95
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\TableAssignedPosts.php
+        [line] =&gt; 23
+        [function] =&gt; dropForeignConstraint
+        [class] =&gt; GeminiLabs\SiteReviews\Database\Tables\AbstractTable
+        [type] =&gt; -&gt;
+    )
+)
+[2023-03-28 18:35:48] ERROR [Database:289] Can&#039;t create table `wp_kapps`.`wp_glsr_assigned_posts` (errno: 121 &quot;Duplicate key on write or update&quot;)
+[2023-03-28 18:35:48] DEBUG [D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 290
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\AbstractTable.php
+        [line] =&gt; 60
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\TableAssignedPosts.php
+        [line] =&gt; 16
+        [function] =&gt; addForeignConstraint
+        [class] =&gt; GeminiLabs\SiteReviews\Database\Tables\AbstractTable
+        [type] =&gt; -&gt;
+    )
+)
+[2023-03-28 18:35:49] ERROR [Database:289] Can&#039;t create table `wp_kapps`.`wp_glsr_assigned_posts` (errno: 121 &quot;Duplicate key on write or update&quot;)
+[2023-03-28 18:35:49] DEBUG [D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 290
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\AbstractTable.php
+        [line] =&gt; 60
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\TableAssignedPosts.php
+        [line] =&gt; 17
+        [function] =&gt; addForeignConstraint
+        [class] =&gt; GeminiLabs\SiteReviews\Database\Tables\AbstractTable
+        [type] =&gt; -&gt;
+    )
+)
+[2023-03-28 18:35:49] ERROR [Database:289] Can&#039;t DROP FOREIGN KEY `glsr_assigned_terms_rating_id_foreign`; check that it exists
+[2023-03-28 18:35:49] DEBUG [D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 290
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\AbstractTable.php
+        [line] =&gt; 95
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\TableAssignedTerms.php
+        [line] =&gt; 22
+        [function] =&gt; dropForeignConstraint
+        [class] =&gt; GeminiLabs\SiteReviews\Database\Tables\AbstractTable
+        [type] =&gt; -&gt;
+    )
+)
+[2023-03-28 18:35:49] ERROR [Database:289] Can&#039;t DROP FOREIGN KEY `glsr_assigned_terms_term_id_foreign`; check that it exists
+[2023-03-28 18:35:49] DEBUG [D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 290
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\AbstractTable.php
+        [line] =&gt; 95
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\TableAssignedTerms.php
+        [line] =&gt; 23
+        [function] =&gt; dropForeignConstraint
+        [class] =&gt; GeminiLabs\SiteReviews\Database\Tables\AbstractTable
+        [type] =&gt; -&gt;
+    )
+)
+[2023-03-28 18:35:51] ERROR [Database:289] Can&#039;t create table `wp_kapps`.`wp_glsr_assigned_terms` (errno: 121 &quot;Duplicate key on write or update&quot;)
+[2023-03-28 18:35:51] DEBUG [D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 290
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\AbstractTable.php
+        [line] =&gt; 60
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\TableAssignedTerms.php
+        [line] =&gt; 16
+        [function] =&gt; addForeignConstraint
+        [class] =&gt; GeminiLabs\SiteReviews\Database\Tables\AbstractTable
+        [type] =&gt; -&gt;
+    )
+)
+[2023-03-28 18:35:51] ERROR [Database:289] Can&#039;t create table `wp_kapps`.`wp_glsr_assigned_terms` (errno: 121 &quot;Duplicate key on write or update&quot;)
+[2023-03-28 18:35:51] DEBUG [D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 290
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\AbstractTable.php
+        [line] =&gt; 60
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\TableAssignedTerms.php
+        [line] =&gt; 17
+        [function] =&gt; addForeignConstraint
+        [class] =&gt; GeminiLabs\SiteReviews\Database\Tables\AbstractTable
+        [type] =&gt; -&gt;
+    )
+)
+[2023-03-28 18:35:52] ERROR [Database:289] Can&#039;t DROP FOREIGN KEY `glsr_assigned_users_user_id_foreign`; check that it exists
+[2023-03-28 18:35:52] DEBUG [D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 290
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\AbstractTable.php
+        [line] =&gt; 95
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\TableAssignedUsers.php
+        [line] =&gt; 23
+        [function] =&gt; dropForeignConstraint
+        [class] =&gt; GeminiLabs\SiteReviews\Database\Tables\AbstractTable
+        [type] =&gt; -&gt;
+    )
+)
+[2023-03-28 18:35:52] ERROR [Database:289] Can&#039;t create table `wp_kapps`.`wp_glsr_assigned_users` (errno: 121 &quot;Duplicate key on write or update&quot;)
+[2023-03-28 18:35:52] DEBUG [D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 290
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\AbstractTable.php
+        [line] =&gt; 60
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\TableAssignedUsers.php
+        [line] =&gt; 16
+        [function] =&gt; addForeignConstraint
+        [class] =&gt; GeminiLabs\SiteReviews\Database\Tables\AbstractTable
+        [type] =&gt; -&gt;
+    )
+)
+[2023-03-28 18:35:54] ERROR [Database:289] Can&#039;t create table `wp_kapps`.`wp_glsr_assigned_users` (errno: 121 &quot;Duplicate key on write or update&quot;)
+[2023-03-28 18:35:54] DEBUG [D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php:247] Array (
+    [0] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\helpers.php
+        [line] =&gt; 247
+        [function] =&gt; trace
+        [class] =&gt; GeminiLabs\SiteReviews\Modules\Backtrace
+        [type] =&gt; -&gt;
+    )
+    [1] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 290
+        [function] =&gt; glsr_trace
+    )
+    [2] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database.php
+        [line] =&gt; 94
+        [function] =&gt; logErrors
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [3] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\AbstractTable.php
+        [line] =&gt; 60
+        [function] =&gt; dbQuery
+        [class] =&gt; GeminiLabs\SiteReviews\Database
+        [type] =&gt; -&gt;
+    )
+    [4] =&gt; Array (
+        [file] =&gt; D:\xampp\htdocs\sites\kapps.loc\wp-content\plugins\site-reviews\plugin\Database\Tables\TableAssignedUsers.php
+        [line] =&gt; 17
+        [function] =&gt; addForeignConstraint
+        [class] =&gt; GeminiLabs\SiteReviews\Database\Tables\AbstractTable
+        [type] =&gt; -&gt;
+    )
+)
+[2023-03-29 07:20:05] WARNING [Commands\DeactivatePlugin:37] Deactivation reason missing.

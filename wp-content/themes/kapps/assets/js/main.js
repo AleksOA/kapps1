@@ -397,3 +397,22 @@ if(body.classList.contains('page-template-join_the_team')) {
 }
 // ==============================================
 // Join the team finish
+
+
+
+// Blog single start
+// ==============================================
+const blogShare = document.querySelector('.blog__share');
+const shareBtn = document.querySelector('.blog__share-btn');
+
+function openButtonsShare(){
+    console.log('openButtonsShare');
+    blogShare.classList.toggle('open');
+}
+
+if(shareBtn != null) {
+    shareBtn.addEventListener('click', openButtonsShare);
+}
+
+// ==============================================
+// Blog single finish

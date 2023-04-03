@@ -63,14 +63,16 @@ $(document).ready(function() {
 
         event.preventDefault();
 
+        const data = {
+            paged: paged,
+            action: 'nextPost',
+            postsPerPage: postsPerPage
+        }
+
         $.ajax({
             type: 'POST',
             url: ajaxData.ajaxurl,
-            data: {
-                paged: paged,
-                action: 'nextPost',
-                postsPerPage: postsPerPage
-            },
+            data,
             beforeSend: function (xhr) {
                 button.text('Loading...');
             },
