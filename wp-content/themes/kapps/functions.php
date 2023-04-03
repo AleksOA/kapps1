@@ -105,6 +105,7 @@ function register_theme_support () {
     add_theme_support( 'post-thumbnails', array( 'portfolio' ) );
     add_theme_support( 'post-thumbnails', array( 'products' ) );
     add_theme_support( 'post-thumbnails', array( 'team' ) );
+    add_theme_support( 'post-thumbnails', array( 'post' ) );
 }
 // ==================================================================
 
@@ -113,6 +114,8 @@ add_image_size( 'thumb-portfolio', 553, 345, true );
 add_image_size( 'thumb-slider', 400, 280, true );
 add_image_size( 'thumb-team-page', 322, 360, true );
 add_image_size( 'thumb-team-single', 320, 340, true );
+add_image_size( 'thumb-blog-page', 257, 257, true );
+add_image_size( 'thumb-blog-single', 894, 400, true );
 
 
 
@@ -124,9 +127,17 @@ add_image_size( 'thumb-team-single', 320, 340, true );
  * Filter the except length to 18 words.
 
  */
+function is_blog () {
+    global  $post;
+    $posttype = get_post_type($post );
+    return ( ((is_archive()) || (is_author()) || (is_category()) || (is_home()) || (is_single()) || (is_tag())) && ( $posttype == 'post')  ) ? true : false ;
+}
+
 function wpdocs_custom_excerpt_length( $length ) {
     if ( is_page_template( 'template_pages/team_template.php' ) ) {
         return 12;
+    } elseif (is_blog() || is_single()){
+        return 30;
     } else {
         return 18;
     }
@@ -192,3 +203,15 @@ function my_assets(){
     );
 }
 // =============================================================================
+
+
+
+//===================================
+//ob_start();
+//$mypost = ob_get_clean();
+//
+//wp_send_json(array(
+//    'post' => $mypost,
+//    'hide' =>  $post > 8 ? true : false
+//));
+//====================================================

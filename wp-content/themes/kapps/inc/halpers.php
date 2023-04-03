@@ -309,3 +309,23 @@ function custom_breadcrumbs() {
     }
 }
 // ==================================
+
+
+// Speed read
+// ================================
+
+function round_up($number, $precision = 2)
+{
+    $fig = (int)str_pad('1', $precision, '0');
+    return (ceil($number * $fig) / $fig);
+}
+
+function read_time($text, $speed_read = 180)
+{
+    $words = count(explode(" ", $text));
+    $read_time = $words / $speed_read;
+    $read_time_round = round_up($read_time, 0);
+    return $read_time_round;
+}
+
+// ================================
