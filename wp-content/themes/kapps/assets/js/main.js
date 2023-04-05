@@ -315,6 +315,8 @@ function addItem() {
 const popupContactUs = document.querySelector('.popup-contact-us');
 const btnClosePopup = document.querySelector('.popup__close-btn');
 const btnHeader = document.querySelector('.btn-header');
+const btnHeaderDesktop = document.querySelector('.btn-header--desktop');
+const btnHeaderMobile = document.querySelector('.btn-header--mobile');
 const btnTalk = document.querySelector('.let-is-talk__btn');
 const body = document.querySelector('body');
 
@@ -329,7 +331,9 @@ function closePopupContactUs() {
 
 }
 
-btnHeader.addEventListener('click', openPopupContactUs);
+// btnHeader.addEventListener('click', openPopupContactUs);
+btnHeaderDesktop.addEventListener('click', openPopupContactUs);
+btnHeaderMobile.addEventListener('click', openPopupContactUs);
 if(btnTalk != null) { btnTalk.addEventListener('click', openPopupContactUs)}
 btnClosePopup.addEventListener('click', closePopupContactUs);
 document.addEventListener('click', (event)=>{
@@ -416,3 +420,15 @@ if(shareBtn != null) {
 
 // ==============================================
 // Blog single finish
+
+// Clutch finish
+// ==============================================
+const btnClutch = document.querySelector('.clutch__item-button-link-btn');
+
+if(btnClutch != null){
+    btnClutch.addEventListener('click', (event)=>{
+        event.preventDefault();
+    });
+}
+// ==============================================
+// Clutch finish

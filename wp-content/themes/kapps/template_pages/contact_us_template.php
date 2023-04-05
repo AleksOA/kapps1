@@ -68,15 +68,16 @@
                             <?php  foreach ($column_one_contact_us as $item ) :
                                 $icon_column_one_contact_us = $item["icon_contacts_us"]["url"];
                                 $text_column_one_contact_us = $item["text_contact_us"];
+                                $link_contact_us = $item["link_contact_us"];
                                 ?>
 
                                 <div class="contacts-contact__contacts-item">
                                     <div class="contacts-contact__contacts-item-image">
                                         <object class="contacts-contact__contacts-item-img" type="image/svg+xml" data="<?php if( $icon_column_one_contact_us ) { echo $icon_column_one_contact_us ;} ?>"></object>
                                     </div>
-                                    <p class="contacts-contact__contacts-item-text">
-                                        <?php if( $text_column_one_contact_us ) { echo $text_column_one_contact_us ;} ?>
-                                    </p>
+                                    <a class="contacts-contact__contacts-item-link" href="<?php if( $link_contact_us ) { echo $link_contact_us ;} ?>" target="_blank">
+                                        <p class="contacts-contact__contacts-item-text"><?php if( $text_column_one_contact_us ) { echo $text_column_one_contact_us ;} ?></p>
+                                    </a>
                                 </div>
                                 <?php endforeach; ?>
                         </div>
@@ -88,15 +89,16 @@
                             <?php  foreach ($column_two_contact_us as $item ) :
                                 $icon_column_two_contact_us = $item["icon_column_two_contact_us"]["url"];
                                 $text_column_two_contact_us = $item["text_column_two_contact_us"];
+                                $link_column_two_contact_us = $item["link_column_two_contact_us"];
                                 ?>
 
                                 <div class="contacts-contact__contacts-item">
                                     <div class="contacts-contact__contacts-item-image">
                                         <object class="contacts-contact__contacts-item-img" type="image/svg+xml" data="<?php if( $icon_column_two_contact_us ) { echo $icon_column_two_contact_us ;} ?>"></object>
                                     </div>
-                                    <p class="contacts-contact__contacts-item-text">
-                                        <?php if( $text_column_two_contact_us ) { echo $text_column_two_contact_us ;} ?>
-                                    </p>
+                                    <a class="contacts-contact__contacts-item-link" href="<?php if( $link_column_two_contact_us ) { echo $link_column_two_contact_us ;} ?>" target="_blank">
+                                        <p class="contacts-contact__contacts-item-text"><?php if( $text_column_two_contact_us ) { echo $text_column_two_contact_us ;} ?></p>
+                                    </a>
                                 </div>
                             <?php endforeach; ?>
                         </div>

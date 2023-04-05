@@ -49,8 +49,9 @@
                         'menu_class' => 'nav',
                         'menu_id' => 'nav'
                     ]); ?>
+                    <a class="btn-header btn-secondary-link font-body-2 btn-header--mobile" href="#">contact us</a>
                 </nav>
-                <a class="btn-header btn-secondary-link font-body-2" href="#">contact us</a>
+                <a class="btn-header btn-secondary-link font-body-2 btn-header--desktop" href="#">contact us</a>
             </div>
         </div>
     </div>

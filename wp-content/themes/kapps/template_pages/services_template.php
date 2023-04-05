@@ -18,6 +18,11 @@
         get_template_part( 'service_and_technologies_part', null, $args);
         ?>
     </section>
+
+    <section>
+        <?php  get_template_part( 'clutch_part' );  ?>
+    </section>
+
     <section>
         <?php  get_template_part( 'services_menu_part' );  ?>
     </section>

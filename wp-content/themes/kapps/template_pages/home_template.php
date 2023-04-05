@@ -53,7 +53,6 @@
             <div class="container">
                 <div class="banner__dots"></div>
             </div>
-
         </div>
     </section>
 
@@ -95,6 +94,10 @@
                 <p class="technologies__text-two"><?php if( $text_two_home_technologies ) { echo $text_two_home_technologies ;} ?></p>
             </div>
         </div>
+    </section>
+
+    <section>
+        <?php  get_template_part( 'clutch_part' );  ?>
     </section>
 
     <section>

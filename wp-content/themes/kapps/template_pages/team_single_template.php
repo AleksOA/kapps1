@@ -88,12 +88,14 @@
 
     <section>
         <?php
+        $author_id_team_single = get_field('author_id_team_single');
+
         $recent_articles  = new WP_Query(array(
             'post_type' => 'post',
             'orderby' => 'date',
             'posts_per_page' => '10',
             'post_status' => 'publish',
-            'author' => 2
+            'author' => $author_id_team_single
         ));
         if (get_the_title()) :
             $arr = explode(" ", get_the_title());
