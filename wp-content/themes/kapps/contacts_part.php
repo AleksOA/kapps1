@@ -26,14 +26,16 @@ $background_image_contacts = get_field('background_image_contcts', 'options')["u
                         <?php if( $contacts_contacts) : foreach ( $contacts_contacts as $item ) :
                             $icon_contact_contacts = $item["icon_contact_contacts"]["url"];
                             $text_contact_contacts = $item["text_contact_contacts"];
+                            $link_contact_contacts = $item["link_contact_contacts"];
                             ?>
                             <div class="contacts__bottom-one-item">
                                 <div class="contacts__bottom-one-item-image">
                                     <object class="contacts__bottom-one-item-img" type="image/svg+xml" data="<?php echo $icon_contact_contacts ?>"></object>
                                 </div>
-                                <p class="contacts__bottom-one-item-text">
-                                    <?php if( $text_contact_contacts ) { echo $text_contact_contacts ;} ?>
-                                </p>
+                                <a class="contacts__bottom-one-item-link" href="<?php if( $link_contact_contacts ) { echo $link_contact_contacts ;} ?>" target="_blank">
+
+                                    <p class="contacts__bottom-one-item-text"><?php if( $text_contact_contacts ) { echo $text_contact_contacts ;} ?></p>
+                                </a>
                             </div>
                             <?php endforeach; ?>
                         <?php endif; ?>

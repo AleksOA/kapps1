@@ -384,7 +384,11 @@ header nav ul > li.open:hover:after{
     top: 38%;
 }
 
-.btn-header {
+.btn-header--mobile {
+    display: none;
+}
+.btn-header--desktop {
+    display: block;
 }
 
 /*Header home
@@ -948,11 +952,23 @@ Let's talk finish*/
     width: 100%;
     height: 100%;
 }
+.contacts__bottom-one-item-link{
+    text-decoration: none;
+}
+
 .contacts__bottom-one-item-text {
     padding-left: 40px;
     font-size: 20px;
     line-height: 24px;
     text-transform: capitalize;
+    text-decoration: none;
+    color: #242424;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.contacts__bottom-one-item-text:hover {
+    color: #08A4E4;
 }
 .contacts__bottom-two {}
 .contacts__bottom-two-items {
@@ -1099,8 +1115,20 @@ Contacts finish*/
     width: 24px;
     height: 24px;
 }
+
 .social__item-img path{
-    fill: #000;!important;
+    transition: all 0.2s;
+}
+.social__item-link:hover .social__item-img path{
+    fill: #0b9854;
+}
+
+.social__item-link:active .social__item-img path{
+    fill: #0f874d;
+    transform: scale(0.98);
+}
+.social__item-link:active .social__item-img{
+    transform: scale(0.98);
 }
 
 .social__item:before {
@@ -1720,14 +1748,62 @@ Serv tech finish*/
     align-items: center;
     padding-left: 10px;
 }
-
-
-
-
 /*============================================
 Recent articles finish*/
 
 
+
+/* Clutch start
+============================================*/
+.clutch {
+    margin-bottom: 120px;
+}
+
+.services-template-services_template .clutch {
+    margin-bottom: 246px;
+}
+.clutch__wrapper {
+    max-width: 898px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    box-shadow: 0 3px 16px 2px rgba(29, 51, 107, 0.15);
+    border-radius: 16px;
+}
+.clutch__items {
+    max-width: 832px;
+    padding: 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.clutch__item-logo {}
+.clutch__item-logo-image {}
+.clutch__item-logo-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.clutch__item-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.clutch__item-data-item-score p{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 38px;
+}
+.clutch__item-data-item-stars {
+    padding: 0 8px;
+}
+.clutch__item-logo-image {}
+.clutch__item-logo-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/*============================================
+Clutch finish*/
 
 /*==============================================================================================
 Global sections finish*/
@@ -2230,8 +2306,28 @@ Services finish*/
 
 /* Portfolio start
 ============================================*/
+.portfolio {
+    margin-bottom: -220px;
+}
+.portfolio__posts_background-top {}
+.portfolio__posts_background-top img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.portfolio__posts_background-center {
+    background-color: #84b5ff17;
+    padding-bottom: 180px;
+}
+.portfolio__posts_background-bottom {}
+.portfolio__posts_background-bottom img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
 .portfolio__posts {
-    margin-bottom: 120px;
 }
 .portfolio__posts-wrapper {
     max-width: 1130px;
@@ -2280,11 +2376,6 @@ Services finish*/
 .portfolio__posts-item-section-two div:last-child {
     margin-bottom: 0;
 }
-
-
-
-
-
 
 
 .portfolio__posts-item.right .portfolio__posts-item-section-one{
@@ -2585,11 +2676,23 @@ About us finish*/
     width: 100%;
     height: 100%;
 }
+.contacts-contact__contacts-item-link {
+    text-decoration: none;
+}
+
 .contacts-contact__contacts-item-text {
     padding-left: 40px;
     font-size: 20px;
     line-height: 24px;
     text-transform: capitalize;
+    text-decoration: none;
+    cursor: pointer;
+    color: #242424;
+    transition: all 0.2s;
+}
+
+.contacts-contact__contacts-item-text:hover{
+    color: #08A4E4;
 }
 /*============================================
 Contacts finish*/
@@ -3626,6 +3729,10 @@ Blog single finish*/
         visibility: visible;
         opacity: 1;
         transform: translateX(0);
+
+
+        overflow-y: scroll;
+        float: right;
     }
 
     header .nav {
@@ -3633,6 +3740,8 @@ Blog single finish*/
         align-items: flex-start;
         padding-top: 80px;
         padding-left: 30px;
+
+        padding-bottom: 120px;
     }
     header nav .sub-menu {
         position: static;
@@ -3652,7 +3761,7 @@ Blog single finish*/
 
     .btn-header {
         position: absolute;
-        left: 0;
+        left: 24px;
         top: 779px;
         z-index: 1001;
         visibility: hidden;
@@ -3660,6 +3769,13 @@ Blog single finish*/
         transform: translateX(-401px);
         transition: all 0.5s;
     }
+    .btn-header--mobile {
+        display: block;
+    }
+    .btn-header--desktop {
+        display: none;
+    }
+
     .btn-header.open {
         visibility: visible;
         opacity: 1;
@@ -3735,7 +3851,8 @@ Blog single finish*/
         padding-left: 20px;
     }
     .btn-header {
-        top: 860px;
+        /*top: 860px;*/
+        top: 880px;
     }
     .logo-one svg rect{
         width: 180px;
@@ -4675,9 +4792,61 @@ Serv tech finish*/
         margin-right: 3px;
     }
 }
-
 /*============================================
 Recent articles finish*/
+
+
+/* Clutch start
+============================================*/
+@media(max-width: 820px){
+    .clutch__items {
+        flex-wrap: wrap;
+    }
+    .clutch__item-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media(max-width: 600px){
+    .clutch {
+        margin-bottom: 80px;
+    }
+    .services-template-services_template .clutch {
+        margin-bottom: 80px;
+    }
+
+    .clutch__items {
+        padding: 33px 10px;
+    }
+    .clutch__item-logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .clutch__item-data {
+        width: 100%;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 440px){
+    .clutch__item-data {
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 378px){
+    .clutch .container{
+        padding: 0 10px;
+    }
+}
+
+
+/*============================================
+Clutch finish*/
 
 /* ==============================================================================================
 Global sections finish*/
@@ -6082,6 +6251,61 @@ Team single    finish*/
 /* Portfolio start
 ============================================*/
 
+
+@media(max-width: 1200px) {
+    .portfolio__posts-item {
+        flex-direction: column;
+        max-width: 553px;
+    }
+    .portfolio__posts-item-section-one {
+        width: 100%;
+    }
+    .portfolio__posts-item-image {
+        padding: 0;
+    }
+    .portfolio__posts-item-image img {
+        border-radius: 12px 12px 0 0 ;
+    }
+    .portfolio__posts-item.right .portfolio__posts-item-image img {
+        border-radius: 12px 12px 0 0;
+    }
+    .portfolio__posts-item-section-two div {
+        padding:0 16px 0 8px;
+    }
+    .portfolio__posts-item-section-right-title {
+        padding: 0 16px;
+    }
+    .portfolio__posts-item.right .portfolio__posts-item-section-two {
+        order: 2;
+    }
+    .portfolio__posts-wrapper {
+        max-width: 553px;
+    }
+    .portfolio__posts-item-section-two {
+        margin: 24px 0 0 16px;
+        width: 100%;
+    }
+    .portfolio__posts-item {
+        margin-bottom: 40px;
+    }
+}
+
+@media(max-width: 600px) {
+    .portfolio__posts-item-section-right-title {
+        padding: 0 8px;
+        font-size: 22px;
+        line-height: 24px;
+    }
+    .portfolio__posts-item-section-two div {
+        padding:0 8px 0 4px;
+    }
+}
+
+@media(max-width: 366px) {
+    .portfolio__posts .container{
+        padding: 0 10px;
+    }
+}
 
 /*============================================
 Portfolio finish*/

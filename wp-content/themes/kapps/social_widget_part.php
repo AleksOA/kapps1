@@ -9,7 +9,7 @@
             ?>
                 <div class="social__item">
                     <a class="social__item-link" target=»_blank href="<?php if( $link_of_social_network ) { echo $link_of_social_network ;} ?>">
-                        <object class="social__item-img" type="image/svg+xml" data="<?php if( $icon_of_social_network ) { echo $icon_of_social_network ;} ?>"></object>
+                        <?php display_svg( $icon_of_social_network, $class = 'social__item-img', $size = 'medium' ) ?>
                     </a>
                 </div>
             <?php endif; ?>
