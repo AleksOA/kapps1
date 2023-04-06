@@ -190,47 +190,52 @@
         $section_title_home_partners = get_field('section_title_home_partners');
         ?>
         <div class="partners">
-            <div class="partners__image">
-                <object class="partners__img" type="image/svg+xml" data="<?php echo get_template_directory_uri() . '/assets/images/home/partners_background.svg' ?>"></object>
+            <div class="partner__background-top">
+                <img class="partner__background-top-img" src="<?php echo get_template_directory_uri() . '/assets/images/home/background_top.png' ?>" alt="Wave">
             </div>
-            <div class="partners__wrapper">
-                <div class="container">
-                    <h2 class="partners__title">
-                        <?php if( $section_title_home_partners ) { echo $section_title_home_partners ;} ?>
-                    </h2>
-                    <div class="partners__items">
-                        <?php
-                        $logo_home_partners = get_field('logo_home_partners');
-                        if($logo_home_partners): foreach ($logo_home_partners as $item) :
-                            if($item["logo_image_home_partners"] == false){
-                                $logo_image_home_partners_url = false;
-                                $logo_image_home_partners_alt = false;
-                            } else{
-                                $logo_image_home_partners_url = $item["logo_image_home_partners"]["url"];
-                                $logo_image_home_partners_alt = $item["logo_image_home_partners"]["alt"];
-                            }
+            <div class="partner__background-center">
+                <div class="partners__wrapper">
+                    <div class="container">
+                        <h2 class="partners__title">
+                            <?php if( $section_title_home_partners ) { echo $section_title_home_partners ;} ?>
+                        </h2>
+                        <div class="partners__items">
+                            <?php
+                            $logo_home_partners = get_field('logo_home_partners');
+                            if($logo_home_partners): foreach ($logo_home_partners as $item) :
+                                if($item["logo_image_home_partners"] == false){
+                                    $logo_image_home_partners_url = false;
+                                    $logo_image_home_partners_alt = false;
+                                } else{
+                                    $logo_image_home_partners_url = $item["logo_image_home_partners"]["url"];
+                                    $logo_image_home_partners_alt = $item["logo_image_home_partners"]["alt"];
+                                }
 
-                            ?>
-                                <div class="partner__item hidden">
-                                    <div class="partner__item-body">
-                                        <div class="partner__item-cover"></div>
-                                        <?php if( $logo_image_home_partners_url != false) :
-                                            echo '<div class="partner__item-logo">';
-                                                echo '<img class="partner__item-logo-img"';
-                                                    echo 'src="' . $logo_image_home_partners_url . '"';
-                                                    echo 'alt="' . $logo_image_home_partners_alt . '"';
-                                                echo '>';
-                                            echo '</div>';
-                                         endif; ?>
+                                ?>
+                                    <div class="partner__item hidden">
+                                        <div class="partner__item-body">
+                                            <div class="partner__item-cover"></div>
+                                            <?php if( $logo_image_home_partners_url != false) :
+                                                echo '<div class="partner__item-logo">';
+                                                    echo '<img class="partner__item-logo-img"';
+                                                        echo 'src="' . $logo_image_home_partners_url . '"';
+                                                        echo 'alt="' . $logo_image_home_partners_alt . '"';
+                                                    echo '>';
+                                                echo '</div>';
+                                             endif; ?>
+                                        </div>
                                     </div>
-                                </div>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                    </div>
-                    <div class="partner__button">
-                        <button class="partner__btn-more hidden2">Show more</button>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </div>
+                        <div class="partner__button">
+                            <button class="partner__btn-more hidden2">Show more</button>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="partner__background-bottom">
+                <img class="partner__background-bottom-img" src="<?php echo get_template_directory_uri() . '/assets/images/home/background_bottom.png' ?>" alt="Wave">
             </div>
         </div>
     </section>

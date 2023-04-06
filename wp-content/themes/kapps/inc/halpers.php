@@ -127,6 +127,41 @@ function custom_breadcrumbs() {
             // If post is a custom post type
             $post_type = get_post_type();
 
+          // =========== My code start=============
+
+            if($post_type == 'post' ){
+                $parents = '';
+                $parents .= '<li class="item-parent item-parent-' . 12 . '"><a class="bread-parent bread-parent-' . 12 . '" href="' . get_permalink( 12 ) . '" title="' . get_the_title( 12 ) . '">' . get_the_title( 12 ) . '</a></li>';
+                $parents .= '<li class="separator separator-' . 12 . '"> ' . $separator . ' </li>';
+                $parents .= '<li class="item-parent item-parent-' . 38 . '"><a class="bread-parent bread-parent-' . 38 . '" href="' . get_permalink( 38 ) . '" title="' . get_the_title( 38 ) . '">' . get_the_title( 38 ) . '</a></li>';
+                $parents .= '<li class="separator separator-' . 38 . '"> ' . $separator . ' </li>';
+
+                echo $parents;
+
+            }
+
+            if( $post_type == 'services' || $post_type == 'technologies'){
+                $parents = '';
+                $parents .= '<li class="item-parent item-parent-' . 12 . '"><a class="bread-parent bread-parent-' . 12 . '" href="' . get_permalink( 12 ) . '" title="' . get_the_title( 12 ) . '">' . get_the_title( 12 ) . '</a></li>';
+                $parents .= '<li class="separator separator-' . 12 . '"> ' . $separator . ' </li>';
+
+                echo $parents;
+
+            }
+
+            if($post_type == 'team' ){
+                $parents = '';
+                $parents .= '<li class="item-parent item-parent-' . 12 . '"><a class="bread-parent bread-parent-' . 12 . '" href="' . get_permalink( 12 ) . '" title="' . get_the_title( 12 ) . '">' . get_the_title( 12 ) . '</a></li>';
+                $parents .= '<li class="separator separator-' . 12 . '"> ' . $separator . ' </li>';
+                $parents .= '<li class="item-parent item-parent-' . 48 . '"><a class="bread-parent bread-parent-' . 48 . '" href="' . get_permalink( 48 ) . '" title="' . get_the_title( 48 ) . '">' . get_the_title( 48 ) . '</a></li>';
+                $parents .= '<li class="separator separator-' . 48 . '"> ' . $separator . ' </li>';
+
+                echo $parents;
+
+            }
+            // =========== My code finish=============
+
+
             // If it is a custom post type display name and link
             if ( $post_type != 'post' ) {
 
@@ -174,7 +209,15 @@ function custom_breadcrumbs() {
 
             // Check if the post is in a category
             if ( ! empty( $last_category ) ) {
-                echo $cat_display;
+            //  =========== My code start=============
+                    $category = $last_category->name;
+                    if($category == "Uncategorized") {
+
+                    }else{
+                        echo $cat_display;
+                    }
+              //  =========== My code finish=============
+//                echo $cat_display;
                 echo '<li class="item-current item-' . $post->ID . '"><strong class="bread-current bread-' . $post->ID . '" title="' . get_the_title() . '">' . get_the_title() . '</strong></li>';
 
                 // Else if post is in a custom taxonomy
@@ -195,7 +238,7 @@ function custom_breadcrumbs() {
             // Category page
             echo '<li class="item-current item-cat"><strong class="bread-current bread-cat">' . single_cat_title( '', false ) . '</strong></li>';
 
-        } else if ( is_page() ) {
+        } else if ( is_page()) {
 
             // Standard page
             if ( $post->post_parent ) {
@@ -229,7 +272,37 @@ function custom_breadcrumbs() {
 //                echo '<li class="item-current item-' . $post->ID . '"><strong class="bread-current bread-' . $post->ID . '"> ' . get_the_title() . '</strong></li>';
 
             }
+//            ================= My code start ================
+        } else if (!is_front_page() && is_home()) {
 
+            $post_id =  get_option( 'page_for_posts' );
+
+            if( !empty($post_id) ) {
+
+                // If child page, get parents
+                $parents_ID = get_post_ancestors( $post_id );
+
+                // Get parents in the right order
+                $parents_ID = array_reverse( $parents_ID );
+
+                // Parent page loop
+                if ( ! isset( $parents ) ) {
+                    $parents = null;
+                }
+                foreach ( $parents_ID as $ancestor ) {
+                    $parents .= '<li class="item-parent item-parent-' . $ancestor . '"><a class="bread-parent bread-parent-' . $ancestor . '" href="' . get_permalink( $ancestor ) . '" title="' . get_the_title( $ancestor ) . '">' . get_the_title( $ancestor ) . '</a></li>';
+                    $parents .= '<li class="separator separator-' . $ancestor . '"> ' . $separator . ' </li>';
+                }
+
+                // Display parent pages
+                echo $parents;
+
+                // Current page
+                echo '<li class="item-current item-' . $post_id . '"><strong title="' . get_the_title($post_id) . '"> ' . get_the_title($post_id) . '</strong></li>';
+
+            }
+
+//            ================= My code finish ================
         } else if ( is_tag() ) {
 
             // Tag page
