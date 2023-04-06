@@ -646,6 +646,19 @@ Header finish*/
     text-decoration: underline #FFFFFF;
 }
 
+.menu-item-object-custom a {
+    cursor: default;
+}
+
+.footer-menu .menu-item-object-custom a:hover {
+    text-decoration: none;
+    cursor: default;
+}
+.menu-item-object-custom .sub-menu a:hover {
+    cursor: pointer;
+}
+
+
 .footer-menu .sub-menu {
     margin-top: 29px;
     margin-left: 25px;
@@ -2115,22 +2128,34 @@ Global sections finish*/
 
 /*Partners
 ===============================*/
+.partner__background-top {
+    width: 100%;
+    height: auto;
+}
+.partner__background-top-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.partner__background-center {
+    background-color: #84b5ff17;
+    padding-bottom: 30px;
+}
+.partner__background-bottom {
+    width: 100%;
+    height: auto;
+}
+.partner__background-bottom-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .partners {
     position: relative;
     margin-bottom: 170px;
 
 }
-.partners__wrapper {
-    padding-top: 227px ;
-}
-/*.partners__image{*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    width: 100%;*/
-/*    height: auto;*/
-/*    z-index: -1;*/
-/*}*/
 
 .partners__image{
     width: 100%;
@@ -2143,25 +2168,10 @@ Global sections finish*/
     height: 100%;
 
 }
-
-.partners__background {
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*width: 100%;*/
-    /*height: 200px;*/
-    /*background-color: #276ED8 0.04;*/
-    /*opacity: 0.04;*/
-    /*z-index: -1;*/
-
-}
 .partners__image--bottom {
     width: 100%;
     margin-top: -73%;
-
-
 }
-
 
 .partners__title {
     text-align: center;
@@ -2754,6 +2764,10 @@ Contacts finish*/
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #0D6EB7;
+    transition: all 0.2s;
+}
+.team__posts-item-section-right-title a:hover {
+    color: #08A4E4;
 }
 
 /*============================================
@@ -3230,24 +3244,6 @@ Team single finish*/
     margin: 0;
 }
 /*====================*/
-
-
-
-/*.kk-star-ratings .kksr-stars .kksr-star .kksr-icon, .kk-star-ratings:not(.kksr-disabled) .kksr-stars .kksr-star:hover ~ .kksr-star .kksr-icon {*/
-/*    background-image: url("../images/blog/kk-star-ratings/inactive.svg");*/
-/*}*/
-
-/*.kk-star-ratings .kksr-stars .kksr-stars-active .kksr-star .kksr-icon {*/
-/*    background-image: url("../images/blog/kk-star-ratings/selected.svg");*/
-/*}*/
-
-/*.kk-star-ratings.kksr-disabled .kksr-stars .kksr-stars-active .kksr-star .kksr-icon, .kk-star-ratings:not(.kksr-disabled) .kksr-stars:hover .kksr-star .kksr-icon {*/
-/*    background-image: url("../images/blog/kk-star-ratings/selected.svg");*/
-/*}*/
-
-/*.kksr-legend {*/
-/*    display: none;*/
-/*}*/
 
 .blog__post-read {
     display: flex;
@@ -5255,6 +5251,12 @@ Global sections finish*/
 @media(max-width: 1338px){
     .partner__btn-more.hidden2{
         display: block;
+    }
+}
+
+@media(max-width: 1046px) {
+    .partners__items {
+        justify-content: space-around;
     }
 }
 
