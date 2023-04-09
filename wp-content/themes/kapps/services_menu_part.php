@@ -20,11 +20,7 @@ $section_services = get_field('section_services', 'options');
                                 <span class="services-menu__item-cover">c</span>
                             </a>
                             <div class="services-menu__item-image">
-                                <object class="services-menu__item-img"
-                                        type="image/svg+xml"
-                                        data="<?php if( $services_image ) { echo $services_image ;} ?>"
-                                >
-                                </object>
+                                <?php display_svg( $services_image, 'services-menu__item-img') ?>
                             </div>
                             <h4 class="services-menu__item-title">
                                 <?php if( $services_text ) { echo $services_text ;} ?>

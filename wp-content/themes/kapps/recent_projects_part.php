@@ -21,7 +21,9 @@
                                 <?php the_post_thumbnail( 'thumb-slider' ) ?>
                             </div>
                             <div class="recent-projects__slick-item-content">
-                                <h3 class="recent-projects__slick-item-content-title"><?php if( get_the_title() ) { echo get_the_title();} ?></h3>
+                                <a class="recent-projects__slick-item-content-title-link" href="<?php echo get_permalink(36)?>">
+                                    <h3 class="recent-projects__slick-item-content-title"><?php if( get_the_title() ) { echo get_the_title();} ?></h3>
+                                </a>
                                 <p class="recent-projects__slick-item-content-text"><?php if( get_the_excerpt() ) { echo get_the_excerpt() ;} ?></p>
                             </div>
                         </div>

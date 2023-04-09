@@ -17,6 +17,13 @@ function menuHeader(){
     let services_link = document.getElementById('menu-item-58').children[0];
     let technologies_footer_link = document.getElementById('menu-item-120').children[0];
     let services_footer_link = document.getElementById('menu-item-112').children[0];
+    let banner_slick_button_one = document.querySelectorAll('.banner__slick-item-button-one');
+
+    banner_slick_button_one.forEach(button =>{
+        button.addEventListener('click', (event)=>{
+            event.preventDefault();
+        });
+    });
 
     technologies_link.addEventListener('click', (event)=>{
         event.preventDefault();

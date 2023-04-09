@@ -19,7 +19,7 @@ $content_two = $args["section_data"]["section_for_current_post_elements"]["item_
                 <div class="serv-tech__section-one-right">
                     <div class="serv-tech__image-wrapper">
                         <?php if($image) : ?>
-                            <object class="serv-tech__img" type="image/svg+xml" data="<?php echo $image ?>"></object>
+                            <?php display_svg( $image, 'serv-tech__img') ?>
                         <?php endif; ?>
                     </div>
                 </div>

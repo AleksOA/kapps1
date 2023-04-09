@@ -44,11 +44,7 @@ $background_image_contacts = get_field('background_image_contcts', 'options')["u
                 <div class="contacts__bottom-two">
                     <div class="contacts__bottom-two-items">
                         <div class="contacts__bottom-two-item-image">
-                            <object class="contacts__bottom-two-item-img"
-                                    type="image/svg+xml"
-                                    data="<?php if( $background_image_contacts ) { echo $background_image_contacts ;} ?>"
-                            >
-                            </object>
+                            <?php display_svg( $background_image_contacts, 'contacts__bottom-two-item-img') ?>
                         </div>
                         <div class="contacts__bottom-two-item-form">
                             <?php  get_template_part( 'contact_form_part' );  ?>
