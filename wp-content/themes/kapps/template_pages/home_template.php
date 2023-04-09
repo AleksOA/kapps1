@@ -139,7 +139,7 @@
                             <div class="services__section-image <?php echo $class ?>">
                                 <div class="services__image-wrapper">
                                    <?php if($image_home_services) : ?>
-                                        <object class="svgGlasses" type="image/svg+xml" data="<?php echo $image_home_services ?>"></object>
+                                        <?php display_svg( $image_home_services, 'svgGlasses') ?>
                                     <?php endif; ?>
                                 </div>
                             </div>
@@ -172,7 +172,7 @@
                             ?>
                             <div class="achievement__item">
                                 <div class="achievement__image">
-                                    <object class="achievement__img" type="image/svg+xml" data="<?php echo $image_home_achievement ?>"></object>
+                                    <?php display_svg( $image_home_achievement, 'achievement__img') ?>
                                 </div>
                                 <div class="achievement__text">
                                     <?php if( $text_home_achievement ) { echo $text_home_achievement ;} ?>
