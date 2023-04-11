@@ -60,8 +60,16 @@
                         <div class="footer__end-content">
                             <?php
                                 $end_footer = get_field('end_footer', 'options');
-                                if($end_footer) {echo $end_footer;}
-                            ?>
+                                $arr = explode(" ", $end_footer);
+
+                            if( $arr ) : foreach ( $arr as $value => $key ) :
+                                if ($key == '@year') $arr[$value] = date("Y");
+                                if($key != '@year') $arr[$value] = $key;
+                             endforeach;
+                             endif;
+                             $arr = implode(" ", $arr);
+                             if($arr) {echo $arr;}
+                             ?>
                         </div>
                     </div>
                 </div>
@@ -84,7 +92,6 @@
             get_template_part( 'contact_us_popup_part', null, $args);
             ?>
         </div>
-
     <?php wp_footer(); ?>
     </body>
 </html>

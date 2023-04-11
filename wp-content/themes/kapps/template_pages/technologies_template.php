@@ -27,18 +27,18 @@
     </section>
 
     <section>
-        <div class="services-text">`
+        <div class="services-text">
             <div class="container">
                 <div class="services-text__wrapper">
                     <div class="services-text__item-one">
                         <?php
-                        $item_one_technologies_text = get_field('item_one_technologies_text');
+                        $item_one_technologies_text = get_field('item_one_technologies_text', 'options');
                         if( $item_one_technologies_text ) { echo $item_one_technologies_text;}
                         ?>
                     </div>
                     <div class="services-text__item-two">
                         <?php
-                        $item_two_technologies_text = get_field('item_two_technologies_text');
+                        $item_two_technologies_text = get_field('item_two_technologies_text', 'options');
                         if( $item_two_technologies_text ) { echo $item_two_technologies_text;}
                         ?>
                     </div>
