@@ -66,6 +66,9 @@
 <section>
     <?php  get_template_part( 'contacts_part' );  ?>
 </section>
+<section>
+    <?php  get_template_part( 'recent_projects_part' );  ?>
+</section>
 <?php get_footer(); ?>
 
 
